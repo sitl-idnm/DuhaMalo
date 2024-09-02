@@ -1,0 +1,209 @@
+.foldersContent {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 380px;
+}
+
+.foldersContent > a {
+	font-family: 'Involve';
+	font-size: 18px;
+	line-height: 150%;
+	letter-spacing: 0.1em;
+	font-weight: 600;
+	color: #F5F1EE;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	min-width: 170px;
+
+	background: right no-repeat url(../../assets/Intro/arrow.svg);
+}
+
+.foldersWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.foldersWrapper {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	position: relative;
+}
+
+.folder {
+	position: absolute;
+}
+
+.folder > div {
+	position: relative;
+}
+
+.folderImg > svg {
+	max-width: 189px;
+	max-height: 130px;
+}
+
+.folder > div > p {
+	position: absolute;
+	top: 30px;
+	left: 14px;
+	font-size: 9px;
+	font-family: 'Involve';
+	font-weight: bold;
+}
+
+.folder2 {
+	z-index: 1;
+}
+
+.folder1 {
+	z-index: 2;
+	top: 70px;
+	right: 53px;
+}
+
+.folder3 {
+	z-index: 3;
+	top: 130px;
+	right: 40px;
+}
+
+.folder4 {
+	z-index: 4;
+	top: 56px;
+	left: 18px;
+}
+
+.folder5 {
+	z-index: 5;
+	top: 121px;
+	left: 40px;
+}
+
+.folder6 {
+	z-index: 6;
+	top: 47px;
+	left: 68px;
+}
+
+.folder8 {
+	z-index: 7;
+	top: 118px;
+	left: 75px;
+}
+
+.folder7 {
+	z-index: 8;
+	top: 190px;
+	left: 10px;
+}
+
+@media (min-width: 768px) {
+	.folders {
+		margin-bottom: 719px;
+	}
+
+	.introTitle > a {
+		font-size: 22px;
+		line-height: 150%;
+
+		max-width: 272px;
+
+	}
+
+	.folderImg > svg {
+		max-width: 376px;
+		max-height: 255px;
+	}
+
+	.folder > div > p {
+		top: 59px;
+		left: 28px;
+
+		font-size: 18px;
+	}
+
+	.folder1 {
+		top: 130px;
+		right: 107px;
+	}
+
+	.folder3 {
+		top: 290px;
+		right: 76px;
+	}
+
+	.folder4 {
+		top: 110px;
+		left: 35px;
+	}
+
+	.folder5 {
+		top: 241px;
+		left: 81px;
+	}
+
+	.folder6 {
+		top: 95px;
+		left: 138px;
+	}
+
+	.folder8 {
+		top: 267px;
+		left: 158px;
+	}
+
+	.folder7 {
+		top: 400px;
+		left: 20px;
+	}
+}
+
+@media (min-width: 1440px) {
+	.folders {
+		margin-bottom: 631px;
+	}
+
+	.folder2 {
+		right: 150px;
+	}
+
+	.folder1 {
+		top: 90px;
+		right: 330px;
+	}
+
+	.folder3 {
+		top: 180px;
+		right: 200px;
+	}
+
+	.folder4 {
+		top: 50px;
+		left: 0;
+	}
+
+	.folder5 {
+		top: 190px;
+		left: 150px;
+	}
+
+	.folder6 {
+		top: 50px;
+		left: 250px;
+	}
+
+	.folder8 {
+		top: 30px;
+		left: 394px;
+	}
+
+	.folder7 {
+		top: 170px;
+		left: 336px;
+	}
+}

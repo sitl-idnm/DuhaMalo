@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'Unbounded';
+  src: url(../../../public/fonts/Unbounded-SemiBold.woff2);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Involve';
+  src: url(../../../public/fonts/Involve-Regular.woff2);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Involve';
+  src: url(../../../public/fonts/Involve-Medium.woff2);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Involve';
+  src: url(../../../public/fonts/Involve-SemiBold.woff2);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Involve';
+  src: url(../../../public/fonts/Involve-Bold.woff2);
+  font-weight: 700;
+}
+
+body {
+  font-family: 'Involve';
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Unbounded';
+  text-transform: uppercase;
+}
+
+.mainPageWrapper {
+  padding: 45px 10px 210px;
+  color: #F5F1EE;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/*                                  MEDIA MIN_WIDTH                                            */
+/*---------------------------------------------------------------------------------------------*/
+
+@media (min-width: 480px) {
+  .mainPageWrapper {
+    padding: 45px 20px 40px;
+  }
+}
+
+@media (min-width: 720px) {
+  .mainPageWrapper {
+    padding: 114px 32px 40px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .mainPageWrapper {
+    padding: 114px 32px 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 1440px) {
+  .mainPageWrapper {
+    padding: 0 75px 40px;
+  }
+
+}

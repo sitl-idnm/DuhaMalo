@@ -1,0 +1,299 @@
+.wrapper {
+	display: flex;
+	justify-content: center;
+
+	color: #F5F1EE;
+}
+
+.titleWrapper{
+	position: relative;
+	top: -50px;
+}
+
+@media (min-width: 1050px) {
+
+  .wrapper {
+		padding: 117px 0;
+  }
+}
+
+.title {
+	position: relative;
+	width: max-content;
+
+	font-size: 26px;
+	font-weight: 600;
+	line-height: 150%;
+
+	color: #F5F1EE;
+}
+@media (min-width: 480px) {
+
+	.title {
+		font-size: 30px;
+	}
+	.titleWrapper{
+		margin-left: 20px;
+	}
+
+}
+
+@media (min-width: 768px) {
+
+	.title {
+		font-size: 42px;
+	}
+	.titleWrapper{
+		position: static;
+	}
+}
+
+@media (min-width: 1050px) {
+
+  .title {
+		font-size: 56px;
+  }
+}
+
+.title::after {
+	content: url(../../assets/Map/logo.svg);
+	width: 35px;
+	height: 26px;
+
+	position: absolute;
+	right: -5px;
+	top: 0;
+}
+
+@media (min-width: 768px) {
+
+	.title::after {
+		width: 71px;
+		height: 53px;
+
+		right: -20px;
+		top: 5px;
+	}
+}
+
+@media (min-width: 1050px) {
+
+  .title::after {
+		width: 79px;
+		height: 58px;
+
+		right: -10px;
+		/*top: auto;*/
+		bottom: 15px;
+  }
+}
+
+.description {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 150%;
+	letter-spacing: 0.01em;
+}
+
+@media (min-width: 768px) {
+
+	.description {
+		font-size: 20px;
+	}
+}
+
+@media (min-width: 1050px) {
+
+  .description {
+		font-size: 26px;
+  }
+}
+
+.listItem {
+
+
+	font-size: 7.79px;
+	font-weight: 600;
+	line-height: 150%;
+}
+
+@media (min-width: 768px) {
+
+	.listItem {
+		font-size: 12.87px;
+	}
+}
+
+@media (min-width: 1050px) {
+
+  .listItem {
+		font-size: 20px;
+  }
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/*                                  WRAPPER CONTRE MARGIN                                            */
+/*---------------------------------------------------------------------------------------------*/
+
+.wrapper {
+  margin: 30px -10px 0;
+}
+
+@media (min-width: 480px) {
+  .wrapper {
+    margin: 30px -20px 0;
+  }
+}
+
+@media (min-width: 720px) {
+  .wrapper {
+    margin: 30px -32px 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  .wrapper {
+    margin: 60px -32px 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .wrapper {
+    margin: 60px -75px 0;
+  }
+
+}
+
+.contreWrapper {
+	max-width: 1440px;
+	width: 100%;
+
+
+	padding: 0 10px 250px;
+
+	display: flex;
+	flex-direction: column;
+
+	margin: 0 auto;
+
+	background-image: url(../../assets/svg/countries.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+@media (min-width: 400px) {
+  .contreWrapper {
+    padding: 0 20px 300px;
+  }
+}
+@media (min-width: 460px) {
+	.contreWrapper {
+		padding: 0 20px 350px;
+	}
+}
+
+@media (min-width: 479px) {
+	.contreWrapper {
+		padding: 0 20px 400px;
+	}
+}
+
+@media (min-width: 533px) {
+  .contreWrapper {
+    padding: 0 20px 450px;
+  }
+}
+@media (min-width: 591px) {
+	.contreWrapper {
+		padding: 0 20px 470px;
+	}
+}
+@media (min-width: 614px) {
+	.contreWrapper {
+		padding: 0 20px 490px;
+	}
+}
+@media (min-width: 637px) {
+	.contreWrapper {
+		padding: 0 20px 510px;
+	}
+}
+@media (min-width: 660px) {
+	.contreWrapper {
+		padding: 0 20px 530px;
+	}
+}
+@media (min-width: 683px) {
+	.contreWrapper {
+		padding: 0 20px 550px;
+	}
+}
+@media (min-width: 706px) {
+	.contreWrapper {
+		padding: 0 20px 600px;
+	}
+}
+
+@media (min-width: 720px) {
+  .contreWrapper {
+    padding: 0 32px 600px;
+  }
+}
+
+@media (min-width: 739px) {
+	.contreWrapper {
+		padding: 0 20px 620px;
+	}
+}
+@media (min-width: 762px) {
+	.contreWrapper {
+		padding: 0 20px 640px;
+	}
+}
+@media (min-width: 851px) {
+	.contreWrapper {
+		padding: 0 20px 660px;
+	}
+}
+@media (min-width: 873px) {
+	.contreWrapper {
+		padding: 0 20px 680px;
+	}
+}
+@media (min-width: 896px) {
+	.contreWrapper {
+		padding: 0 20px 700px;
+	}
+}
+@media (min-width: 920px) {
+	.contreWrapper {
+		padding: 0 20px 720px;
+	}
+}
+@media (min-width: 943px) {
+	.contreWrapper {
+		padding: 0 20px 740px;
+	}
+}
+@media (min-width: 966px) {
+	.contreWrapper {
+		padding: 0 20px 760px;
+	}
+}
+
+
+
+
+@media (min-width: 1000px) {
+  .contreWrapper {
+    padding: 0 32px 700px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .contreWrapper {
+    padding: 0 75px 900px;
+  }
+}

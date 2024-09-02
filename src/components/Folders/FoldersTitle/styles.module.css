@@ -1,0 +1,69 @@
+.foldersTitle h2 {
+	margin-top: 0px;
+	margin-bottom: 89px;
+
+	font-size: 24px;
+	line-height: 150%;
+}
+
+.titleOrange {
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	vertical-align: bottom;
+}
+
+.titleOrange::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background-color: #EB4824;
+	z-index: -1;
+}
+
+.titleOrange.animate::before {
+  animation: slideIn 2s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 360px;
+  }
+}
+
+@media (min-width: 450px) {
+	.foldersTitle h2 {
+		font-size: 30px;
+	}
+}
+
+@media (min-width: 580px) {
+	.foldersTitle h2 {
+		font-size: 39px;
+	}
+}
+
+@media (min-width: 768px) {
+	.foldersTitle h2 {
+		font-size: 48px;
+
+		margin-top: 0px;
+		margin-bottom: 142px;
+	}
+}
+
+@media (min-width: 1440px) {
+	.foldersTitle {
+		text-align: center;
+		margin: 0px auto 100px;
+
+		max-width: 830px;
+	}
+}

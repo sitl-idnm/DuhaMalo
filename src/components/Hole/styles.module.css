@@ -1,0 +1,261 @@
+.breaker {
+	margin: 0 -75px;
+
+	overflow-x: hidden;
+}
+
+.wrapper {
+	width: 100%;
+
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	gap: 26px;
+
+	height: 200vh;
+
+	margin: -200px 0 30px auto;
+}
+
+@media (min-width: 1400px) {
+
+	.wrapper {
+		max-width: 90%;
+		width: 90%;
+	}
+}
+
+.title {
+	max-width: 370px;
+	margin: 0 0 37px;
+
+	font-style: 24px;
+	font-weight: 600;
+	line-height: 150%;
+}
+
+@media (min-width: 768px) {
+
+	.title {
+		max-width: 704px;
+
+		margin: 0 0 56px;
+
+		font-size: 42px;
+	}
+}
+
+@media (min-width: 1200px) {
+
+	.title {
+		max-width: 1200px;
+
+		margin: 0 auto 26px;
+		padding-right: 10%;
+
+		font-size: 48px;
+		text-align: center;
+	}
+}
+
+
+.cardWrapper {
+	display: flex;
+	gap: 30px;
+
+	position: relative;
+}
+
+.card {
+	max-width: 304px;
+	position: absolute;
+	width: 100%;
+}
+
+@media (min-width: 768px) {
+
+	.card {
+		max-width: 473px;
+	}
+}
+
+.cardIcon {
+	max-width: 16px;
+
+	margin: 0 0 12px;
+}
+
+@media (min-width: 768px) {
+
+	.cardIcon {
+		max-width: 32px;
+
+		margin: 0 0 20px;
+	}
+}
+
+.cardTitle {
+	font-family: 'Involve';
+
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 150%;
+
+	margin: 0 0 8px;
+}
+
+@media (min-width: 768px) {
+
+	.cardTitle {
+		font-size: 28px;
+		letter-spacing: 0.14em;
+
+		margin: 0 0 16px;
+	}
+}
+
+.cardContent {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	font-size: 10px;
+}
+
+@media (min-width: 768px) {
+
+	.cardContent {
+		font-size: 17px;
+	}
+}
+
+.cardList {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px 4.5px;
+}
+
+@media (min-width: 768px) {
+
+	.cardList {
+		gap: 5px 7px;
+	}
+}
+
+.cardItem {
+	list-style: none;
+
+	padding: 6.4px 10.1px;
+	border: 0.9px solid #F5F1EE;
+	border-radius: 41px;
+}
+
+@media (min-width: 768px) {
+
+	.cardItem {
+		padding: 10.4px 16.1px;
+	}
+}
+
+@media (min-width: 1200px) {
+
+	.cardItem {
+	}
+}
+
+/* @media (min-width: 768px) {
+
+	. {
+	}
+}
+
+@media (min-width: 1200px) {
+
+	. {
+	}
+} */
+
+.hole {
+	position: absolute;
+	top: calc(30% + 140px);
+	right: -20px;
+	left: -20px;
+
+	width: calc(100% + 40px);
+	max-height: 1200px;
+}
+
+@media (min-width: 768px) {
+
+	.hole {
+		top: calc(30% - 100px);
+		right: -32px;
+		left: -32px;
+
+		width: calc(100% + 64px);
+	}
+}
+
+@media (min-width: 1000px) {
+
+	.hole {
+		top: 30%;
+		right: -75px;
+		left: -75px;
+
+		width: calc(100% + 150px);
+	}
+}
+
+@media (min-width: 1440px) {
+
+	.hole {
+		top: calc(30% - 150px);
+		right: -75px;
+		left: -75px;
+
+		width: calc(100% + 150px);
+	}
+}
+
+.container {
+	max-width: 1290px;
+	justify-self: flex-start;
+
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+	left: 10%;
+
+	z-index: 0;
+}
+
+.pipe {
+  width: 400px;
+  height: 700px;
+	position: absolute;
+  left: 5%;
+}
+
+.ball {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+	left: 5%;
+  top: 40px;
+}
+
+.ball img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

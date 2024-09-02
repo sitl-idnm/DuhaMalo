@@ -1,0 +1,71 @@
+.advantages {
+	display: flex;
+	margin: 0 auto;
+	max-width: max-content;
+}
+
+.advantagesContent:nth-child(2) {
+	align-self: flex-end;
+}
+
+.advantagesContent,
+.advantagesContentPlanshet {
+	max-width: 347px;
+}
+
+@media (min-width: 360px) {
+	.advantages {
+		gap: 24px;
+		flex-direction: column;
+		margin: 0 -10px 80px;
+		padding-left: 5px;
+	}
+}
+
+@media (min-width: 370px) {
+	.advantages {
+		margin: 0 auto 80px;
+	}
+}
+
+@media (min-width: 768px) {
+	.advantages {
+		max-width: none;
+		margin-bottom: 149px;
+
+		gap: 33px;
+		flex-direction: column;
+		align-self: flex-start;
+	}
+
+	.advantagesContentPlanshet {
+		align-self: flex-end;
+	}
+
+	.advantages > div:last-child {
+		margin-left: 5%;
+	}
+}
+
+@media (min-width: 1440px) {
+	.advantages {
+		margin-bottom: 195;
+
+		gap: 53px;
+		flex-direction: row;
+		justify-content: center;
+		align-self: center;
+	}
+
+	.advantagesContent:first-child {
+		width: 100%;
+	}
+
+	.advantagesContentPlanshet {
+		align-self: center;
+	}
+
+	.advantages > div:last-child {
+		margin-left: 0;
+	}
+}

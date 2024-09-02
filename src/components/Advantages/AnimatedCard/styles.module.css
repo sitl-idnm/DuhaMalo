@@ -1,0 +1,54 @@
+/* Анимация появления плашки */
+.card {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fadeIn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Стили для содержимого карточки */
+.cardContent {
+  max-width: 347px; /* Фиксированная ширина для фона */
+  min-height: 239px; /* Увеличенная минимальная высота */
+  background: url('../../../assets/Advantages/folder.svg') center center no-repeat;
+  background-size: cover; /* Фон будет растянут до размеров контейнера */
+  padding: 40px;
+  text-align: left; /* Выравнивание текста по левому краю */
+  color: white;
+  box-sizing: border-box; /* Учитываем padding внутри ширины */
+  display: flex;
+  flex-direction: column;
+  justify-content: end; /* Выравнивание текста по вертикали */
+  overflow: hidden; /* Скрываем вылезающий текст */
+}
+
+.number {
+  font-size: 60px;
+  font-family: 'Unbounded';
+  margin-bottom: 4px;
+  opacity: 0;
+  animation: fadeInNumber 1s ease-out forwards;
+}
+
+.text {
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 1;
+  color: #F5F1EE70;
+  word-wrap: break-word; /* Если текст длинный, переносим его */
+  /* Анимация текста будет происходить через JavaScript, поэтому здесь только базовые стили */
+}
+
+/* Анимация появления числа */
+@keyframes fadeInNumber {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

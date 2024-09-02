@@ -1,0 +1,44 @@
+.intro {
+	background: center no-repeat url(../../assets/Intro/background.svg);
+	overflow: hidden;
+
+  margin: -83px -75px 472px;
+  padding: 83px 75px;
+}
+
+
+@media (min-width: 360px) {
+  .intro {
+    background: center no-repeat url(../../assets/Intro/background-360.svg);
+    background-size: cover;
+
+		margin: -114px 0 150px -32px;
+		padding: 114px 32px;
+	}
+}
+
+@media (min-width: 768px) {
+  .intro {
+    background: center no-repeat url(../../assets/Intro/background-768.svg);
+    background-size: cover;
+  }
+}
+
+@media (max-width: 1440px) {
+  .intro {
+    background: center no-repeat url(../../assets/Intro/background-1440.svg);
+    background-size: cover;
+  }
+}
+
+@media (min-width: 1440px) {
+  .intro {
+    background: center no-repeat url(../../assets/Intro/background.svg);
+    background-size: cover;
+
+    max-width: 1440px;
+
+    margin: 0 auto 472px;
+    padding: 83px 75px 259px;
+  }
+}

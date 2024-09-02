@@ -1,0 +1,286 @@
+.wrapper {
+  width: 354px;
+
+  font-size: 12px;
+
+  margin: 131px auto 0;
+}
+
+.container {
+  display: flex;
+}
+
+.leftText {
+  display: flex;
+  flex-direction: column;
+  gap: 264px;
+
+  width: 148px;
+
+  margin-top: 20px;
+}
+
+.rightText {
+  display: flex;
+  flex-direction: column;
+  gap: 248px;
+
+  width: 148px;
+
+  margin-top: 168px;
+}
+
+.arrow {
+  position: sticky;
+  top: 30%;
+
+  display: flex;
+  justify-content: center;
+
+  z-index: 1;
+
+  transition: opacity 0.3s ease;
+}
+
+.arrow.visible {
+  opacity: 1;
+}
+
+.arrow svg {
+  width: 37px;
+}
+
+.arrowLine {
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+
+  margin: 0 20px;
+}
+
+.arrowLine svg {
+  height: 824px;
+}
+
+.heart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+  bottom: 70px;
+  right: 5px;
+}
+
+.heart svg {
+  width: 274px;
+  animation: heartbeat 3s infinite;
+}
+
+.textBlock {
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+
+/*.btn {*/
+/*  font-size: 17px;*/
+/*  width: 206px;*/
+
+/*  border: 1px solid #F5F1EE;*/
+/*  border-radius: 65.14px;*/
+
+/*  padding: 20px 55px;*/
+/*}*/
+
+.btn {
+  display: inline-block;
+
+  padding: 20px 55px;
+
+  border-radius: 65.14px;
+  border: 1px solid #F5F1EE;
+
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 17px;
+
+  transition: all 0.3s;
+
+  position: relative;
+
+  overflow: hidden;
+
+  z-index: 1;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 10rem;
+
+  z-index: -2;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 0;
+  height: 100%;
+
+  background: linear-gradient(139.77deg, #E31717 4.54%, #FFB800 95.16%);
+
+  transition: all 0.3s;
+
+  border-radius: 10rem;
+
+  z-index: -1;
+}
+
+.btn:hover {
+  color: #fff;
+
+  border-color: transparent;
+}
+
+.btn:hover::before {
+  width: 100%;
+}
+
+.btn:active {
+  transform: translateY(-3px);
+}
+
+
+/*---------------------------------------------------------------------------------------------*/
+/*                                  ANIMATION                                           */
+/*---------------------------------------------------------------------------------------------*/
+@keyframes heartbeat {
+  0% {
+    transform: scale(.75);
+  }
+  20% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(.75);
+  }
+  60% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(.75);
+  }
+  100% {
+    transform: scale(.75);
+  }
+}
+
+@keyframes moveSection1 {
+  0% {
+    transform: translate(-50px, 50px);
+  }
+  100% {
+    transform: translate(50px, -50px);
+  }
+}
+
+@keyframes moveSection2 {
+  0% {
+    transform: translate(-50px, -50px);
+  }
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/*                                  MEDIA MIN_WIDTH                                            */
+/*---------------------------------------------------------------------------------------------*/
+
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 720px) {
+  .wrapper {
+    font-size: 18px;
+
+    width: 656px;
+
+    margin-top: 378px;
+  }
+
+  .leftText {
+    width: 325px;
+
+    text-align: end;
+
+    margin-top: 111px;
+
+    gap: 392px;
+  }
+
+  .rightText {
+    width: 329px;
+
+    text-align: start;
+
+    margin-top: 295px;
+
+    gap: 368px;
+  }
+
+  .arrowLine svg {
+    height: 1194px;
+    width: 6px;
+  }
+
+  .arrow {
+    display: flex;
+    justify-content: center;
+  }
+
+  .arrow svg {
+    width: 43px;
+  }
+
+  .heart {
+    right: 2px
+  }
+
+  .heart svg {
+    width: 364px;
+  }
+
+}
+
+@media (min-width: 1000px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 1440px) {
+  .wrapper {
+    margin-top: 156px;
+
+  }
+
+  .arrowLine {
+    margin: 0 44px;
+  }
+
+
+}
