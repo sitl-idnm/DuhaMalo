@@ -1,11 +1,13 @@
+import { TextAnimation } from '../TextAnimation';
 import styles from './styles.module.css';
 
 export const Need = () => {
   return (
     <div className={styles.needWrapper}>
-      <div className={styles.title}>
-        <h2>нам нужны</h2>
-      </div>
+      <TextAnimation
+          text={`Нам нужны`}
+          style={styles.title}
+      />
       <div className={styles.section1}>
         <div className={styles.orangeSection}>
           Уверенные middle- и senior-специалисты
