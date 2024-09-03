@@ -12,7 +12,6 @@ import { Folders } from '../../components/Folders';
 import { FormKP } from '../../components/Forms';
 import { useState, useEffect } from 'react';
 import { Footer } from '../../components/Footer';
-import { TextAnimation } from '../../components/TextAnimation';
 
 export const MainPage = () => {
   const [showFormKP, setShowFormKP] = useState(false);
@@ -65,7 +64,6 @@ export const MainPage = () => {
       />
       <About />
       <Advantages />
-      <TextAnimation />
       <Leader />
       <Result />
       <Hole />
