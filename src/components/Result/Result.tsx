@@ -3,6 +3,7 @@ import styles from './styles.module.css';
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { TextAnimation } from '../TextAnimation/TextAnimation.tsx'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -70,6 +71,10 @@ export const Result = () => {
   return (
     <div className={styles.section}>
       <CardScrollAnimation>
+        <TextAnimation
+          text={'Добиваемся результатов <br /> за счет жестких принципов и мягких подходов'}
+          style={styles.title}
+        />
         <h2 className={styles.title}>
           Добиваемся результатов
           <br />
