@@ -6,6 +6,7 @@
   margin-top: 248px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 10px;
 
   overflow: hidden;
 }
@@ -108,7 +109,7 @@
     max-width: 1468px;
 
     margin-top: 196px;
-    padding: 0 60px;
+    padding: 0 32px;
   }
 
   .orangeSection {
@@ -121,11 +122,6 @@
   .needWrapper{
     padding: 0;
   }
-
-}
-
-@media (min-width: 1200px) {
-
 
 }
 
