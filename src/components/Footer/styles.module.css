@@ -7,6 +7,8 @@
 
   margin-left: auto;
   margin-right: auto;
+
+  padding: 0 10px 15px;
 }
 
 .footerLeft, .footerRight {
@@ -37,6 +39,9 @@
     flex-direction: row;
     gap: 0;
     justify-content: space-between;
+
+
+    padding: 0 32px;
   }
   .footerLeft{
     text-align: start;
@@ -46,5 +51,8 @@
   }
 }
 
-
-
+@media (min-width: 1440px) {
+  .footerContainer {
+    padding: 0 75px 35px;
+  }
+}

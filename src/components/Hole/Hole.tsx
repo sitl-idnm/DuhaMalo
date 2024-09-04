@@ -1,6 +1,6 @@
 import styles from './styles.module.css';
 import { Circle } from './Circle';
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import hole from '../../assets/Hole/hole.svg';
@@ -8,6 +8,7 @@ import pipe from '../../assets/Tube/pipe.svg';
 import gradient from '../../assets/Tube/gradient.svg';
 import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
 import { TextAnimation } from '../TextAnimation';
+import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
@@ -18,7 +19,7 @@ interface CardScrollAnimationProps {
 const CardScrollAnimation = ({ children }: CardScrollAnimationProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  useGSAP(() => {
     if (containerRef.current) {
       const cards = containerRef.current.querySelectorAll(`.${styles.card}`);
 
@@ -27,7 +28,7 @@ const CardScrollAnimation = ({ children }: CardScrollAnimationProps) => {
           trigger: containerRef.current,
           start: '30% top',
           end: '+=400%',
-          scrub: true,
+          scrub: 1,
           pin: true,
         }
       });
@@ -65,7 +66,7 @@ export const Tube: React.FC = () => {
   const ballRef = useRef<HTMLDivElement>(null);
   const pipeRef = useRef<SVGSVGElement>(null);
 
-  useEffect(() => {
+  useGSAP(() => {
     if (ballRef.current && pipeRef.current) {
       const path = pipeRef.current.querySelector('path');
 
@@ -75,7 +76,7 @@ export const Tube: React.FC = () => {
             trigger: pipeRef.current,
             start: 'top center',
             end: 'bottom center',
-            scrub: true,
+            scrub: 1,
           }
         }).to(ballRef.current, {
           motionPath: {
@@ -91,8 +92,8 @@ export const Tube: React.FC = () => {
         }).to(ballRef.current, {
           x: 500,
           y: 100,// Перемещение за правый край экрана
-          scale: 50, // Увеличение размера
-          rotate: 180,
+          scale: 35, // Увеличение размера
+          rotate: 90,
           duration: 1, // Длительность финальной анимации
           ease: 'power2.inOut'
         });
@@ -121,7 +122,6 @@ export const Tube: React.FC = () => {
 
 export const Hole = () => {
   return (
-    <div className={styles.breaker}>
       <CardScrollAnimation>
         <Tube />
         <TextAnimation
@@ -184,6 +184,5 @@ export const Hole = () => {
         </div>
         <img src={hole} alt="Изображение чёрной дыры" className={styles.hole} />
       </CardScrollAnimation>
-    </div>
   );
 }
