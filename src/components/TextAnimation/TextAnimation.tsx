@@ -19,7 +19,6 @@ export function TextAnimation({ text, style }: { text: any, style: any }) {
 			scrollTrigger: {
 				trigger: Line,
 				scrub: 1,
-				markers: true,
 				start: 'top 100%'
 			}
 		})
