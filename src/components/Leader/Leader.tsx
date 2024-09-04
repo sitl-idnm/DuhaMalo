@@ -7,9 +7,10 @@ import dropSmall from '../../assets/Leader/dropSmall.svg'
 import dropBigger from '../../assets/Leader/dropBigger.svg'
 
 
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,7 +26,7 @@ interface AnimatedSpanProps {
 const AnimatedSpan = ({ children, className }: AnimatedSpanProps) => {
   const spanRef = useRef<HTMLSpanElement>(null);
 
-  useEffect(() => {
+  useGSAP(() => {
     if (spanRef.current) {
       const letters = spanRef.current.querySelectorAll(`.${styles.letter}`);
 
@@ -34,7 +35,7 @@ const AnimatedSpan = ({ children, className }: AnimatedSpanProps) => {
           trigger: spanRef.current,
           start: 'top 90%',
           end: 'bottom 40%',
-          scrub: true,
+          scrub: 1,
         },
       });
 
@@ -65,7 +66,7 @@ interface ScrollRevealProps {
 const ScrollReveal = ({ children }: ScrollRevealProps) => {
   const revealRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  useGSAP(() => {
     if (revealRef.current) {
       gsap.fromTo(
         revealRef.current.children,
@@ -78,7 +79,7 @@ const ScrollReveal = ({ children }: ScrollRevealProps) => {
             trigger: revealRef.current,
             start: 'top 60%',
             end: 'bottom 30%',
-            scrub: true,
+            scrub: 1,
           },
         }
       );
@@ -100,7 +101,7 @@ interface SvgRevealProps {
 const SvgReveal = ({ children, className }: SvgRevealProps) => {
   const svgRef = useRef<HTMLSpanElement>(null);
 
-  useEffect(() => {
+  useGSAP(() => {
     if (svgRef.current) {
       gsap.fromTo(
         svgRef.current,
@@ -113,7 +114,7 @@ const SvgReveal = ({ children, className }: SvgRevealProps) => {
             trigger: svgRef.current,
             start: 'top 80%',
             end: 'bottom 60%',
-            scrub: true,
+            scrub: 1,
           },
         }
       );
