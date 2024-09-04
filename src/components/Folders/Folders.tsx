@@ -25,7 +25,8 @@ export const Folders = ({ onGetQuoteClick }: IProps) => {
             scrollTrigger: {
                 trigger: container,
                 start: 'top 10%', // Начинаем, когда верх контейнера достигает верха окна
-                scrub: 5, // Привязка анимации к прокрутке
+                end: '+=250%', // Прокручиваем высоту контейнера
+                scrub: 2, // Привязка анимации к прокрутке
                 pin: true, // Фиксируем контейнер на месте
             }
         });
