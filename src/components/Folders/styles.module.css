@@ -1,3 +1,7 @@
+.folders {
+	padding: 0 10px;
+}
+
 .foldersContent {
 	display: flex;
 	flex-direction: column;
@@ -105,6 +109,7 @@
 @media (min-width: 768px) {
 	.folders {
 		margin-bottom: 719px;
+		padding: 0 32px;
 	}
 
 	.introTitle > a {
@@ -166,6 +171,7 @@
 @media (min-width: 1440px) {
 	.folders {
 		margin-bottom: 631px;
+		padding: 0 75px;
 	}
 
 	.folder2 {
