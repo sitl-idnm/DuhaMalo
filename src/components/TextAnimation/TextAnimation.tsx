@@ -7,7 +7,7 @@ import styles from './styles.module.css';
 
 gsap.registerPlugin(ScrollTrigger)
 
-export function TextAnimation({ text, style }) {
+export function TextAnimation({ text, style }: { text: string, style: any }) {
 	const TextAnimka = useRef(null)
 
 	const textClass = classNames(styles.Animka, style);
