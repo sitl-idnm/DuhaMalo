@@ -26,7 +26,7 @@ export const About = () => {
                 trigger: cont,
                 start: 'top 40%',
 
-                scrub: true,
+                scrub: 1,
                 pin: true
             }
         })

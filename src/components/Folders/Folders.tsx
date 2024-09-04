@@ -1,11 +1,12 @@
-import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from './styles.module.css';
 import { FoldersTitle } from './FoldersTitle';
 import { Folder } from './Folder';
+import { useGSAP } from '@gsap/react';
+import { useEffect } from 'react';
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 type IProps = {
   onGetQuoteClick: () => void;
@@ -25,7 +26,7 @@ export const Folders = ({ onGetQuoteClick }: IProps) => {
                 trigger: container,
                 start: 'top 10% top', // Начинаем, когда верх контейнера достигает верха окна
                 end: '+=250%', // Прокручиваем высоту контейнера
-                scrub: true, // Привязка анимации к прокрутке
+                scrub: 1, // Привязка анимации к прокрутке
                 pin: true, // Фиксируем контейнер на месте
             }
         });

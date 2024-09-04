@@ -1,8 +1,9 @@
 import styles from './styles.module.css';
 
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,7 +14,7 @@ interface CardScrollAnimationProps {
 const CardScrollAnimation = ({ children }: CardScrollAnimationProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  useGSAP(() => {
     if (containerRef.current) {
       const cardsRegular = containerRef.current.querySelectorAll(`.${styles.cardRegular}`);
       const cardsOrange = containerRef.current.querySelectorAll(`.${styles.cardOrange}`);
@@ -24,7 +25,7 @@ const CardScrollAnimation = ({ children }: CardScrollAnimationProps) => {
           trigger: containerRef.current,
           start: 'top 10% center', // Начинаем анимацию, когда верх контейнера достигает верха окна
           end: 'bottom', // Анимация длится на 300% высоты окна
-          scrub: true, // Привязка анимации к прокрутке
+          scrub: 1, // Привязка анимации к прокрутке
           pin: true, // Фиксируем скролл на месте, пока длится анимация
         }
       })
