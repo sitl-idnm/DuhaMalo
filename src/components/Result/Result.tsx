@@ -73,7 +73,11 @@ export const Result = () => {
     <div className={styles.section}>
       <CardScrollAnimation>
         <TextAnimation
-          text={`Добиваемся результатов за счет жестких принципов и мягких подходов`}
+          text={[
+            'Добиваемся результатов',
+            'за счет жестких принципов',
+            'и мягких подходов'
+          ]}
           style={styles.title}
         />
         <div className={styles.cardWrapper}>
