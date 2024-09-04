@@ -1,10 +1,14 @@
+import { TextAnimation } from '../TextAnimation';
 import styles from './styles.module.css';
 
 export const Map = () => {
   return (
 		<section className={styles.wrapper}>
 				<div className={styles.titleWrapper}>
-				<h2 className={styles.title}>Хотите стать<br />одним из нас? </h2>
+				<TextAnimation
+          text={`Хотите стать одним из нас?`}
+          style={styles.title}
+      	/>
 				<p className={styles.description}>Приглашаем в команду</p>
 				</div>
     </section>

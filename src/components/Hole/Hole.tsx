@@ -7,6 +7,7 @@ import hole from '../../assets/Hole/hole.svg';
 import pipe from '../../assets/Tube/pipe.svg';
 import gradient from '../../assets/Tube/gradient.svg';
 import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
+import { TextAnimation } from '../TextAnimation';
 import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
@@ -123,7 +124,10 @@ export const Hole = () => {
   return (
       <CardScrollAnimation>
         <Tube />
-        <h2 className={styles.title}>Комплексно подходим к&nbsp;решению маркетинговых задач бизнеса</h2>
+        <TextAnimation
+          text={`Комплексно подходим к решению маркетинговых задач бизнеса`}
+          style={styles.title}
+      	/>
         <div className={styles.slider}>
           <div className={styles.cardWrapper}>
             <div className={styles.card}>
