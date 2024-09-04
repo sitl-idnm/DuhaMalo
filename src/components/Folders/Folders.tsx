@@ -40,6 +40,7 @@ export const Folders = ({ onGetQuoteClick }: IProps) => {
                     opacity: 0, // Плавное исчезновение
                     ease: 'sine.in', // Плавность анимации
                     duration: 100, // Длительность анимации
+                    zIndex: -1
                 }, "+=5"); // Задержка между анимациями
         });
 
@@ -51,6 +52,7 @@ export const Folders = ({ onGetQuoteClick }: IProps) => {
                 opacity: 0, // Плавное исчезновение
                 ease: 'power2.in', // Плавность анимации
                 duration: 5, // Длительность анимации
+                zIndex: -1
             });
     }, []);
 
