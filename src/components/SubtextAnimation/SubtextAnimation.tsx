@@ -6,7 +6,7 @@ import classNames from 'classnames';
 
 gsap.registerPlugin(ScrollTrigger)
 
-export const SubtextAnimation = ({ subtext, style }) => {
+export const SubtextAnimation = ({ subtext, style }: { subtext: any, style: any }) => {
 
 	// for (let i = 0; i < subtext.length; i++) {
 	// 	subtext[i].setAttribute('ref', 'Subtext');
