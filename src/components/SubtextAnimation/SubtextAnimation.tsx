@@ -6,40 +6,9 @@ import classNames from 'classnames';
 interface SubtextAnimationProps {
   subtext: string | string[];
   style?: string;
+}
 
 gsap.registerPlugin(ScrollTrigger)
-
-export const SubtextAnimation = ({ subtext, style }: { subtext: any, style: any }) => {
-
-	const Class = classNames(style);
-
-	const Subtext = useRef(null);
-
-
-	useGSAP(() => {
-		const text = Subtext.current
-		const tl = gsap.timeline
-		tl({
-			scrollTrigger: {
-				trigger: text,
-				scrub: 1,
-				start: 'top 200%'
-			}
-		}).fromTo(text, {
-			y: 150
-		}, {
-			y: 0
-		})
-	})
-
-	return (
-		<div className={Class}>
-			<p ref={Subtext}>
-				{subtext}
-			</p>
-		</div>
-	)
-}
 
 export const SubtextAnimation = ({ subtext, style }: SubtextAnimationProps) => {
 
@@ -54,7 +23,7 @@ export const SubtextAnimation = ({ subtext, style }: SubtextAnimationProps) => {
         scrollTrigger: {
           trigger: text,
           scrub: 1,
-          start: 'top 180%',
+          start: 'top 200%',
         }
       });
 
@@ -68,13 +37,9 @@ export const SubtextAnimation = ({ subtext, style }: SubtextAnimationProps) => {
 
   return (
     <div className={Class}>
-      <p ref={Subtext}>
-        {Array.isArray(subtext) ? subtext.map((line, index) => (
-          <span key={index}>
-            {line} <br />
-          </span>
-        )) : subtext}
-      </p>
-    </div>
+			<p ref={Subtext}>
+				{subtext}
+			</p>
+		</div>
   );
 };
