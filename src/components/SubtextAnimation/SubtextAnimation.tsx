@@ -3,12 +3,12 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import classNames from 'classnames';
 
-gsap.registerPlugin(ScrollTrigger);
-
 interface SubtextAnimationProps {
   subtext: string | string[];
   style?: string;
 }
+
+gsap.registerPlugin(ScrollTrigger)
 
 export const SubtextAnimation = ({ subtext, style }: SubtextAnimationProps) => {
 
@@ -23,7 +23,7 @@ export const SubtextAnimation = ({ subtext, style }: SubtextAnimationProps) => {
         scrollTrigger: {
           trigger: text,
           scrub: 1,
-          start: 'top 180%',
+          start: 'top 200%',
         }
       });
 
@@ -37,13 +37,9 @@ export const SubtextAnimation = ({ subtext, style }: SubtextAnimationProps) => {
 
   return (
     <div className={Class}>
-      <p ref={Subtext}>
-        {Array.isArray(subtext) ? subtext.map((line, index) => (
-          <span key={index}>
-            {line} <br />
-          </span>
-        )) : subtext}
-      </p>
-    </div>
+			<p ref={Subtext}>
+				{subtext}
+			</p>
+		</div>
   );
 };

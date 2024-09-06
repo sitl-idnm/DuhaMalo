@@ -4,7 +4,6 @@ import styles from './styles.module.css';
 import { FoldersTitle } from './FoldersTitle';
 import { Folder } from './Folder';
 import { useGSAP } from '@gsap/react';
-import { useEffect } from 'react';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -13,7 +12,7 @@ type IProps = {
 };
 
 export const Folders = ({ onGetQuoteClick }: IProps) => {
-    useEffect(() => {
+    useGSAP(() => {
         const container = document.querySelector(`.${styles.foldersContent}`);
         const wrapper = document.querySelector(`.${styles.foldersWrapper}`);
         const folders = gsap.utils.toArray(`.${styles.folder}`) as HTMLElement[];
