@@ -32,6 +32,8 @@
   margin-bottom: 4px;
   opacity: 0;
   animation: fadeInNumber 1s ease-out forwards;
+
+  will-change: opacity, transform;
 }
 
 .text {
@@ -41,6 +43,8 @@
   color: #F5F1EE70;
   word-wrap: break-word; /* Если текст длинный, переносим его */
   /* Анимация текста будет происходить через JavaScript, поэтому здесь только базовые стили */
+
+  will-change: opacity, transform;
 }
 
 /* Анимация появления числа */
