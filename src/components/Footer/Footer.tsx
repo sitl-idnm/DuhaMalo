@@ -8,11 +8,11 @@ export const Footer = () => {
         <a href='#'>Политика конфиденциальности</a>
       </div>
       <div className={styles.footerRight}>
-        <a href='mailto:email@mail.ru' className={styles.email}>
-          email@mail.ru
+        <a href='mailto:info@agency-mst.com' className={styles.email}>
+          info@agency-mst.com
         </a>
-        <a href='tel:+79999999999' className={styles.phone}>
-          +7 (999) 999 99-99
+        <a href='tel:+79869900999' className={styles.phone}>
+          +7 (986) 990 09-99
         </a>
       </div>
     </div>
