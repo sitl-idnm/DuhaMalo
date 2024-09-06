@@ -6,7 +6,6 @@
   padding: 83px 75px;
 }
 
-
 @media (min-width: 360px) {
   .intro {
     background: center no-repeat url(../../assets/Intro/background-360.svg);
