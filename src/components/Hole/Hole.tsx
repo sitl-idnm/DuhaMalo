@@ -90,10 +90,10 @@ export const Tube: React.FC = () => {
           duration: 1,
           ease: 'none'
         }).to(ballRef.current, {
-          x: 500,
-          y: 100,// Перемещение за правый край экрана
-          scale: 35, // Увеличение размера
-          rotate: 90,
+          x: 900,
+          y: 800,// Перемещение за правый край экрана
+          scale: 22, // Увеличение размера
+          rotate: 0,
           duration: 1, // Длительность финальной анимации
           ease: 'power2.inOut'
         });

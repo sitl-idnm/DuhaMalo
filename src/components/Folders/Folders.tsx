@@ -24,9 +24,9 @@ export const Folders = ({ onGetQuoteClick }: IProps) => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: container,
-                start: 'top 10% top', // Начинаем, когда верх контейнера достигает верха окна
+                start: 'top 10%', // Начинаем, когда верх контейнера достигает верха окна
                 end: '+=250%', // Прокручиваем высоту контейнера
-                scrub: 1, // Привязка анимации к прокрутке
+                scrub: 2, // Привязка анимации к прокрутке
                 pin: true, // Фиксируем контейнер на месте
             }
         });
@@ -40,6 +40,7 @@ export const Folders = ({ onGetQuoteClick }: IProps) => {
                     opacity: 0, // Плавное исчезновение
                     ease: 'sine.in', // Плавность анимации
                     duration: 100, // Длительность анимации
+                    zIndex: -1
                 }, "+=5"); // Задержка между анимациями
         });
 
@@ -47,10 +48,11 @@ export const Folders = ({ onGetQuoteClick }: IProps) => {
         tl.fromTo(wrapper,
             { y: 0, opacity: 1 },
             {
-                y: -1000, // Перемещаем вверх
+                y: -100, // Перемещаем вверх
                 opacity: 0, // Плавное исчезновение
                 ease: 'power2.in', // Плавность анимации
                 duration: 5, // Длительность анимации
+                zIndex: -1
             });
     }, []);
 

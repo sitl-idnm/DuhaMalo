@@ -7,7 +7,7 @@ export const ArrowLine = () => {
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
     >
-      <rect width='6' height='1720' rx='3' fill='#2C2C2C' fill-opacity='0.23' />
+      <rect width='6' height='1720' rx='3' fill='#2C2C2C' fillOpacity='0.23' />
     </svg>
   );
 };

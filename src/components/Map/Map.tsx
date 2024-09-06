@@ -7,7 +7,10 @@ export const Map = () => {
 		<section className={styles.wrapper}>
 				<div className={styles.titleWrapper}>
 				<TextAnimation
-          text={`Хотите стать одним из нас?`}
+					text={[
+						`Хотите стать`,
+						`одним из нас?`
+					]}
           style={styles.title}
 				/>
 
