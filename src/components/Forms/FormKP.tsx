@@ -24,14 +24,11 @@ export const FormKP = ({ onClose }: IProps) => {
 
   useEffect(() => {
     if (isFormOpen) {
-      console.log('Добавляем класс body-no-scroll');
       document.body.classList.add('body-no-scroll');
     } else {
-      console.log('Удаляем класс body-no-scroll');
       document.body.classList.remove('body-no-scroll');
     }
     return () => {
-      console.log('Удаляем класс body-no-scroll при размонтировании');
       document.body.classList.remove('body-no-scroll');
     };
   }, [isFormOpen]);
@@ -50,14 +47,14 @@ export const FormKP = ({ onClose }: IProps) => {
 
     emailjs
       .send(
-        'service_ijzb22k',
-        'template_wc7618n',
+        'service_nrlv0rj',
+        'template_8oh2tps',
         {
           from_name: formData.name,
           from_email: formData.email,
           from_tel: formData.tel,
         },
-        'M8feieIbzB2iIbwFf',
+        'iIWzgLrMQ8RiUP4BV',
       )
       .then(
         (result) => {
