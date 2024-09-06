@@ -14,6 +14,8 @@
 		transform: translate(-50%, -50%) scale(1.1, 1.2); /* Легкое вытяжение и центрирование */
 		opacity: 1; /* Полная непрозрачность в центре */
     	z-index: 0;
+
+			will-change: opacity, transform;
 }
 
 @media (min-width: 768px) {

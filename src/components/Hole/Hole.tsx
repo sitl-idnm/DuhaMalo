@@ -76,7 +76,7 @@ export const Tube: React.FC = () => {
             trigger: pipeRef.current,
             start: 'top center',
             end: 'bottom center',
-            scrub: 1,
+            scrub: 1.2,
           }
         }).to(ballRef.current, {
           motionPath: {
@@ -90,11 +90,11 @@ export const Tube: React.FC = () => {
           duration: 1,
           ease: 'none'
         }).to(ballRef.current, {
-          x: 900,
+          x: '100%',
           y: 800,// Перемещение за правый край экрана
-          scale: 22, // Увеличение размера
+          scale: 17, // Увеличение размера
           rotate: 0,
-          duration: 1, // Длительность финальной анимации
+          duration: 3, // Длительность финальной анимации
           ease: 'power2.inOut'
         });
       }
