@@ -11,7 +11,7 @@ export const Header = () => {
         </a>
       </div>
       <div className={styles.headerContent}>
-        <a href='tel:+7 (999) 999 99-99'>+7 (999) 999 99-99</a>
+        <a href='tel:+79869900999'>+7 (986) 990 09-99</a>
         <img src={Tg} alt='tg-icon' />
       </div>
     </section>
