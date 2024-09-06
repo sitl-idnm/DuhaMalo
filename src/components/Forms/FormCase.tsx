@@ -24,14 +24,11 @@ export const FormCase = ({ onClose }: IProps) => {
 
   useEffect(() => {
     if (isFormOpen) {
-      console.log('Добавляем класс body-no-scroll');
       document.body.classList.add('body-no-scroll');
     } else {
-      console.log('Удаляем класс body-no-scroll');
       document.body.classList.remove('body-no-scroll');
     }
     return () => {
-      console.log('Удаляем класс body-no-scroll при размонтировании');
       document.body.classList.remove('body-no-scroll');
     };
   }, [isFormOpen]);
