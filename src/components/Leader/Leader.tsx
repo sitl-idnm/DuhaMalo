@@ -140,13 +140,17 @@ export const Leader = () => {
         <ScrollReveal><span className={styles.titleAnimation}>Лидогенерации</span></ScrollReveal>
       </h2>
       <SubtextAnimation
-        subtext={['Наша цель — стать компанией № 1', 'в лидогенерации и мы уверенно', 'идём к eё достижению!']}
+        subtext={'Наша цель — стать компанией № 1'}
         style={styles.description}
       />
-      {/* <p className={styles.description}>
-        Наша цель — стать компанией №&nbsp;1 в&nbsp;лидогенерации и мы уверенно
-        идём&nbsp;к&nbsp;eё&nbsp;достижению!
-      </p> */}
+      <SubtextAnimation
+        subtext={'в лидогенерации и мы уверенно'}
+        style={styles.description}
+      />
+      <SubtextAnimation
+        subtext={'идём к eё достижению!'}
+        style={styles.description}
+      />
       <div className={styles.ball}>
         <Ball />
         <div className={styles.drop}><img src={drop} alt="Капля" /></div>
