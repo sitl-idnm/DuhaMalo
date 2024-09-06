@@ -1,3 +1,4 @@
+import { SubtextAnimation } from '../SubtextAnimation';
 import { TextAnimation } from '../TextAnimation';
 import styles from './styles.module.css';
 
@@ -8,8 +9,12 @@ export const Map = () => {
 				<TextAnimation
           text={`Хотите стать одним из нас?`}
           style={styles.title}
-      	/>
-				<p className={styles.description}>Приглашаем в команду</p>
+				/>
+
+				<SubtextAnimation
+					subtext={'Приглашаем в команду'}
+					style={styles.description}
+				/>
 				</div>
     </section>
   );

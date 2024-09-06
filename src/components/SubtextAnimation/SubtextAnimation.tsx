@@ -8,10 +8,6 @@ gsap.registerPlugin(ScrollTrigger)
 
 export const SubtextAnimation = ({ subtext, style }: { subtext: any, style: any }) => {
 
-	// for (let i = 0; i < subtext.length; i++) {
-	// 	subtext[i].setAttribute('ref', 'Subtext');
-	// };
-
 	const Class = classNames(style);
 
 	const Subtext = useRef(null);
@@ -24,7 +20,7 @@ export const SubtextAnimation = ({ subtext, style }: { subtext: any, style: any 
 			scrollTrigger: {
 				trigger: text,
 				scrub: 1,
-				start: 'top 180%'
+				start: 'top 200%'
 			}
 		}).fromTo(text, {
 			y: 150
@@ -36,11 +32,7 @@ export const SubtextAnimation = ({ subtext, style }: { subtext: any, style: any 
 	return (
 		<div className={Class}>
 			<p ref={Subtext}>
-				{Array.isArray(subtext) ? subtext.map((line) => (
-					<span>
-						{line} <br />
-					</span>
-				)) : subtext}
+				{subtext}
 			</p>
 		</div>
 	)
