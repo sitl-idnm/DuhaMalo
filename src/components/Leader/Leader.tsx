@@ -11,6 +11,7 @@ import React, { useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
+import { SubtextAnimation } from '../SubtextAnimation';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -138,10 +139,14 @@ export const Leader = () => {
         </span></SvgReveal>
         <ScrollReveal><span className={styles.titleAnimation}>Лидогенерации</span></ScrollReveal>
       </h2>
-      <p className={styles.description}>
+      <SubtextAnimation
+        subtext={['Наша цель — стать компанией № 1', 'в лидогенерации и мы уверенно', 'идём к eё достижению!']}
+        style={styles.description}
+      />
+      {/* <p className={styles.description}>
         Наша цель — стать компанией №&nbsp;1 в&nbsp;лидогенерации и мы уверенно
         идём&nbsp;к&nbsp;eё&nbsp;достижению!
-      </p>
+      </p> */}
       <div className={styles.ball}>
         <Ball />
         <div className={styles.drop}><img src={drop} alt="Капля" /></div>
