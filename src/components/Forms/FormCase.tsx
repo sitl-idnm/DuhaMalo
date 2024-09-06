@@ -47,14 +47,14 @@ export const FormCase = ({ onClose }: IProps) => {
 
     emailjs
       .send(
-        'service_ijzb22k',
-        'template_wc7618n',
+        'service_nrlv0rj',
+        'template_8oh2tps',
         {
           from_name: formData.name,
           from_email: formData.email,
           from_tel: formData.tel,
         },
-        'M8feieIbzB2iIbwFf',
+        'iIWzgLrMQ8RiUP4BV',
       )
       .then(
         (result) => {

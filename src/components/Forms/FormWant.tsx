@@ -25,16 +25,13 @@ export const FormWant = ({ onClose }: IProps) => {
 
   useEffect(() => {
     if (isFormOpen) {
-      console.log('Добавляем класс body-no-scroll');
       document.body.classList.add('body-no-scroll');
       setScrollPosition(window.scrollY); // Сохраняем текущую позицию скроллинга
     } else {
-      console.log('Удаляем класс body-no-scroll');
       document.body.classList.remove('body-no-scroll');
       window.scrollTo(0, scrollPosition); // Восстанавливаем сохраненную позицию скроллинга
     }
     return () => {
-      console.log('Удаляем класс body-no-scroll при размонтировании');
       document.body.classList.remove('body-no-scroll');
     };
   }, [isFormOpen]);
@@ -53,14 +50,14 @@ export const FormWant = ({ onClose }: IProps) => {
 
     emailjs
       .send(
-        'service_ijzb22k',
-        'template_wc7618n',
+        'service_nrlv0rj',
+        'template_8oh2tps',
         {
           from_name: formData.name,
           from_email: formData.email,
           from_tel: formData.tel,
         },
-        'M8feieIbzB2iIbwFf',
+        'iIWzgLrMQ8RiUP4BV',
       )
       .then(
         (result) => {
