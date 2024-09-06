@@ -1,5 +1,6 @@
 .folders {
 	padding: 0 10px;
+	margin-bottom: 100px;
 }
 
 .foldersContent {
@@ -108,7 +109,7 @@
 
 @media (min-width: 768px) {
 	.folders {
-		margin-bottom: 719px;
+		margin-bottom: 170px;
 		padding: 0 32px;
 	}
 
@@ -170,7 +171,7 @@
 
 @media (min-width: 1440px) {
 	.folders {
-		margin-bottom: 631px;
+		margin-bottom: 275px;
 		padding: 0 75px;
 	}
 
