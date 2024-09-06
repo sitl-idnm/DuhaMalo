@@ -37,7 +37,6 @@ export const About = () => {
             },
             {
                 x: (i) => i === 0 ? 0 : 0,
-                opacity: 0,
                 zIndex: 2
             }
         )
