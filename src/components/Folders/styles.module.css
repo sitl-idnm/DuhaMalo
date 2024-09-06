@@ -40,6 +40,8 @@
 
 .folder {
 	position: absolute;
+
+  will-change: opacity, transform;
 }
 
 .folder > div {

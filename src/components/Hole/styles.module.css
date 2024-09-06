@@ -69,12 +69,16 @@
 	gap: 30px;
 
 	position: relative;
+
+  will-change: opacity, transform;
 }
 
 .card {
 	max-width: 304px;
 	position: absolute;
 	width: 100%;
+
+  will-change: opacity, transform;
 }
 
 @media (min-width: 768px) {
@@ -255,6 +259,8 @@
 
 	left: 5%;
   top: 40px;
+
+  will-change: opacity, transform;
 }
 
 .ball img {

@@ -42,6 +42,8 @@
 
     background: center no-repeat url(../../assets/About/about__back.svg);
     background-size: cover;
+
+    will-change: opacity, transform;
 }
 
 
