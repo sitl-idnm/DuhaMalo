@@ -1,8 +1,10 @@
 {
   "files": [],
   "compilerOptions": {
+    "strict": false,
     "noImplicitAny": false,
-    "strict": false // Разрешение использования типа any
+    "suppressImplicitAnyIndexErrors": true,
+    "skipLibCheck": true,
   },
   "references": [
     {
