@@ -2,137 +2,112 @@ import styles from './styles.module.css';
 import { Arrow } from './Arrow';
 import { ArrowLine } from './ArrowLine';
 import { Heart } from './Heart';
-import { useEffect, useRef, useState } from 'react';
 import { FormWant } from '../Forms';
+import { useRef } from 'react';
+import { useGSAP } from '@gsap/react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger)
 
 type IProps = {
   onGetQuoteClick: () => void;
   showForm: boolean;
   onClose: () => void;
+  text: string;
 };
+
+function ArrowText({ text, style }) {
+	const animka = useRef(null)
+
+	useGSAP(() => {
+		const anim = animka.current
+
+		const tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: anim,
+				start: 'top 50%',
+				end: 'top 70%',
+				scrub: 1
+			}
+		})
+		tl.fromTo(anim, {
+			opacity: 0.3
+		}, {
+			opacity: 1
+		})
+	})
+
+	return (
+		<div ref={animka} className={style}>
+			<p>
+				{text}
+			</p>
+		</div>
+	)
+}
 
 export const HeartSection = ({
   onGetQuoteClick,
   showForm,
   onClose,
 }: IProps) => {
-  const arrowRef = useRef<HTMLDivElement | null>(null);
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const [visibleBlocks, setVisibleBlocks] = useState([
-    false,
-    false,
-    false,
-    false,
-    false,
-  ]);
-  const [isArrowVisible, setIsArrowVisible] = useState(true);
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const arrow = useRef(null)
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (arrowRef.current && containerRef.current) {
-        const arrowRect = arrowRef.current.getBoundingClientRect();
-        const containerRect = containerRef.current.getBoundingClientRect();
-        const textBlocks = containerRef.current.querySelectorAll(
-          `.${styles.textBlock}`,
-        );
+  useGSAP(() => {
+    const arrowOrange = arrow.current
 
-        // Check if the arrow is at the same vertical level as each text block
-        textBlocks.forEach((block, index) => {
-          const blockRect = block.getBoundingClientRect();
-          if (
-            arrowRect.top < blockRect.bottom &&
-            arrowRect.bottom > blockRect.top
-          ) {
-            setVisibleBlocks((prev) => {
-              const newVisibleBlocks = [...prev];
-              newVisibleBlocks[index] = true; // Set block to visible
-              return newVisibleBlocks;
-            });
-          } else {
-            setVisibleBlocks((prev) => {
-              const newVisibleBlocks = [...prev];
-              newVisibleBlocks[index] = false; // Set block to not visible
-              return newVisibleBlocks;
-            });
-          }
-        });
-
-        // Check if the arrow has reached 50 pixels before the bottom of the container
-        if (arrowRect.bottom >= containerRect.bottom - 50) {
-          setIsArrowVisible(false); // Hide the arrow
-        } else {
-          setIsArrowVisible(true); // Show the arrow
-        }
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: arrowOrange,
+        pin: true,
+        scrub: 2,
+        start: 'top 50%',
+        end: '+=127%'
       }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    // Initial check on mount
-    handleScroll();
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (showForm) {
-      setScrollPosition(window.scrollY); // Сохраняем текущую позицию скроллинга
-    } else {
-      window.scrollTo(0, scrollPosition); // Восстанавливаем сохраненную позицию скроллинга
-    }
-  }, [showForm, scrollPosition]);
+    }).fromTo(arrowOrange, {
+      opacity: 1
+    }, {
+      opacity: 0
+    });
+  });
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.container} ref={containerRef}>
+      <div className={styles.container}>
         <div className={styles.leftText}>
-          <div
-            className={styles.textBlock}
-            style={{ opacity: visibleBlocks[0] ? 1 : 0.3 }}
-          >
-            Удаленная работа
-          </div>
-          <div
-            className={styles.textBlock}
-            style={{ opacity: visibleBlocks[1] ? 1 : 0.3 }}
-          >
-            Обучение, наставничество и поддержка
-          </div>
-          <div
-            className={styles.textBlock}
-            style={{ opacity: visibleBlocks[2] ? 1 : 0.3 }}
-          >
-            Праздники и корпоративы в Дубае и других странах
-          </div>
+          <ArrowText
+            text={'Удаленная работа'}
+            style={styles.textBlock}
+          />
+          <ArrowText
+            text={'Обучение, наставничество и поддержка'}
+            style={styles.textBlock}
+          />
+          <ArrowText
+            text={'Праздники и корпоративы в Дубае и других странах'}
+            style={styles.textBlock}
+          />
         </div>
-        <div>
-          <div
-            className={styles.arrow}
-            ref={arrowRef}
-            style={{ opacity: isArrowVisible ? 1 : 0 }} // Arrow visibility controlled here
-          >
-            <Arrow />
+        <div className={styles.centerLine}>
+          <div>
+            <div ref={arrow}>
+              <Arrow />
+            </div>
           </div>
           <div className={styles.arrowLine}>
             <ArrowLine />
           </div>
         </div>
         <div className={styles.rightText}>
-          <div
-            className={styles.textBlock}
-            style={{ opacity: visibleBlocks[3] ? 1 : 0.3 }}
-          >
-            Открытое общение и максимум свободы в рамках выполнения задач
-          </div>
-          <div
-            className={styles.textBlock}
-            style={{ opacity: visibleBlocks[4] ? 1 : 0.3 }}
-          >
-            Комфортная команда, которая создает идеальную среду для роста
-          </div>
+          <ArrowText
+            text={'Открытое общение и максимум свободы в рамках выполнения задач'}
+            style={styles.textBlock}
+          />
+          <ArrowText
+            text={'Комфортная команда, которая создает идеальную среду для роста'}
+            style={styles.textBlock}
+          />
         </div>
       </div>
       <div className={styles.heart}>
