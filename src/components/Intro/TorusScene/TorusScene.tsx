@@ -16,7 +16,7 @@ const RotatingTorus = () => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-  
+
   // Вращение торуса
   useFrame(() => {
     if (torusRef.current) {
@@ -28,7 +28,7 @@ const RotatingTorus = () => {
     <mesh ref={torusRef}>
       <group>
         <lineSegments>
-          <edgesGeometry args={[new THREE.TorusGeometry(10, 4, 16, 26)]} />
+          <edgesGeometry args={[new THREE.TorusGeometry(10, 4, 16, 70)]} />
           <lineBasicMaterial color="white" />
         </lineSegments>
       </group>
