@@ -1,13 +1,16 @@
-import styles from './styles.module.css'
+import styles from './styles.module.css';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 
 const RotatingTorus = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [size, setSize] = useState({ width: window.innerWidth, height: window.innerHeight });
-  const torusRef = useRef();
 
-  // Update size on window resize
+  // Указываем точный тип для рефа как Mesh из Three.js
+  const torusRef = useRef<THREE.Mesh>(null);
+
+  // Обновление размера окна при изменении размеров
   useEffect(() => {
     const handleResize = () => {
       setSize({ width: window.innerWidth, height: window.innerHeight });
@@ -28,8 +31,9 @@ const RotatingTorus = () => {
     <mesh ref={torusRef}>
       <group>
         <lineSegments>
-          <edgesGeometry args={[new THREE.TorusGeometry(10, 4, 16, 70)]} />
-          <lineBasicMaterial color="white" />
+          {/* Исправлены аргументы для edgesGeometry */}
+          <edgesGeometry attach="geometry" args={[new THREE.TorusGeometry(10, 4, 16, 70)]} />
+          <lineBasicMaterial attach="material" color="white" />
         </lineSegments>
       </group>
     </mesh>
