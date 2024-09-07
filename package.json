@@ -5,16 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "SKIP_PREFLIGHT_CHECK=true react-scripts tsc -b && vite build",
+    "build": "tsc -b && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
-    "@react-three/drei": "^9.112.0",
-    "@react-three/fiber": "^8.17.6",
     "@splinetool/react-spline": "^4.0.0",
-    "@types/three": "^0.168.0",
     "axios": "^1.7.6",
     "classnames": "^2.5.1",
     "emailjs-com": "^3.2.0",
@@ -23,8 +20,7 @@
     "react-dom": "^18.3.1",
     "react-intersection-observer": "^9.13.0",
     "scrollmagic": "^2.0.8",
-    "spline": "^0.0.0",
-    "three": "^0.168.0"
+    "spline": "^0.0.0"
   },
   "devDependencies": {
     "@types/react": "^17.0.2",
