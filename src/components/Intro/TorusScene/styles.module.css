@@ -1,0 +1,47 @@
+.torus {
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	right: 0;
+	top: 40%;
+}
+
+@media (min-width: 550px) {
+	.torus {
+		top: 30%;
+	}
+}
+
+@media (min-width: 690px) {
+	.torus {
+		top: 40%;
+	}
+}
+
+@media (min-width: 768px) {
+	.torus {
+		width: 600px;
+		height: 600px;
+		top: 50%;
+	}
+}
+
+@media (min-width: 1000px) {
+	.torus {
+		width: 700px;
+		height: 700px;
+		top: 25%;
+	}
+}
+
+@media (min-width: 1200px) {
+	.torus {
+		top: 5%;
+	}
+}
+
+@media (min-width: 1440px) {
+	.torus {
+		top: 10%;
+	}
+}
