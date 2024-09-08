@@ -54,8 +54,8 @@ export function TextAnimation({ text, style }: TextAnimationProps) {
 
   return (
     <h2 className={textClass} ref={TextAnimka}>
-      {Array.isArray(text) ? text.map((line) => (
-        <span>
+      {Array.isArray(text) ? text.map((line, index) => (
+        <span key={index}>
           {line} <br />
         </span>
       )) : text}
