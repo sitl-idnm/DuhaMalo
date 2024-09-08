@@ -47,7 +47,6 @@ type IProps = {
   onGetQuoteClick: () => void;
   showForm: boolean;
   onClose: () => void;
-  text: string; // Добавляем text как необязательный параметр
 };
 
 export const HeartSection = ({
