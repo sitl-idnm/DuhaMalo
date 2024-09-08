@@ -244,7 +244,19 @@
   width: 400px;
   height: 700px;
 	position: absolute;
-  left: 5%;
+  left: 20%;
+}
+
+@media (min-width: 450px) {
+	.pipe {
+		left: 15%;
+	}
+}
+
+@media (min-width: 768px) {
+	.pipe {
+		left: 5%;
+	}
 }
 
 .ball {
