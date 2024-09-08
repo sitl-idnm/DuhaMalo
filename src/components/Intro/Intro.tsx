@@ -16,9 +16,11 @@ export const Intro = ({ onGetQuoteClick, showFormCase, onClose }: IProps) => {
     <section className={styles.intro}>
       <Header />
       <GradientScroll />
-      <TorusScene />
-      <IntroTitle onGetQuoteClick={onGetQuoteClick} />
-      {showFormCase && <FormCase onClose={onClose} />}
+      <div className={styles.titleTorus}>
+        <IntroTitle onGetQuoteClick={onGetQuoteClick} />
+        {showFormCase && <FormCase onClose={onClose} />}
+        <TorusScene />
+      </div>
     </section>
   );
 };

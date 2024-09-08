@@ -15,7 +15,7 @@
 .leftText {
   display: flex;
   flex-direction: column;
-  gap: 264px;
+  gap: 400px;
 
   width: 148px;
 
@@ -25,7 +25,7 @@
 .rightText {
   display: flex;
   flex-direction: column;
-  gap: 248px;
+  gap: 400px;
 
   width: 148px;
 
@@ -33,37 +33,40 @@
 }
 
 .arrow {
-  position: sticky;
-  top: 30%;
-
   display: flex;
   justify-content: center;
 
   z-index: 1;
 
-  transition: opacity 0.3s ease;
-}
-
-.arrow.visible {
-  opacity: 1;
+  will-change: opacity, transform;
 }
 
 .arrow svg {
   width: 37px;
 }
 
+.centerLine {
+  display: flex;
+  flex-direction: column;
+  width: 94px;
+  align-items: center;
+}
+
 .arrowLine {
   display: flex;
   justify-content: center;
 
-  position: relative;
+  position: absolute;
 
   margin: 0 20px;
+
+  will-change: opacity, transform;
 }
 
 .arrowLine svg {
-  height: 824px;
+  height: 1200px;
 }
+
 
 .heart {
   display: flex;
@@ -80,8 +83,14 @@
   animation: heartbeat 3s infinite;
 }
 
+.enable {
+  display: flex;
+}
+
 .textBlock {
-  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+  color: #F5F1EE;
+
+  will-change: opacity, transform;
 }
 
 
@@ -240,17 +249,18 @@
   }
 
   .arrowLine svg {
-    height: 1194px;
+    height: 1300px;
     width: 6px;
   }
 
   .arrow {
-    display: flex;
+    display: none;
     justify-content: center;
   }
 
   .arrow svg {
     width: 43px;
+    display: none;
   }
 
   .heart {
@@ -268,10 +278,6 @@
     margin-top: 156px;
 
     padding: 0 75px;
-  }
-
-  .arrowLine {
-    margin: 0 44px;
   }
 
 
