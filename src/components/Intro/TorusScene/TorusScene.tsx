@@ -5,7 +5,7 @@ import * as THREE from 'three';
 
 const RotatingTorus = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [size, setSize] = useState({ width: window.innerWidth, height: window.innerHeight });
+  const [, setSize] = useState({ width: window.innerWidth, height: window.innerHeight });
 
   // Указываем точный тип для рефа как Mesh из Three.js
   const torusRef = useRef<THREE.Mesh>(null);

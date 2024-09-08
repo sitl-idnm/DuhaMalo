@@ -6,8 +6,8 @@ h1 {
 .introTitle {
 	display: flex;
 	flex-direction: column;
+	align-self: flex-start;
 	gap: 44px;
-	margin-bottom: 120px;
 	margin-top: 80px;
 	max-width: 950px;
 
