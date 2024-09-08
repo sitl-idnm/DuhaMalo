@@ -1,5 +1,11 @@
+.titleTorus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .intro {
-	background: center no-repeat url(../../assets/Intro/background.svg);
+  background: center no-repeat url(../../assets/Intro/background.svg);
 	overflow: hidden;
 
   margin: 0 0 472px;
@@ -37,8 +43,13 @@
     background-size: cover;
 
     max-width: 1440px;
-
     margin: 0 auto 472px;
     padding: 83px 75px 259px;
+
+  }
+
+  .titleTorus {
+    flex-direction: row;
+    margin-bottom: 100px;
   }
 }
