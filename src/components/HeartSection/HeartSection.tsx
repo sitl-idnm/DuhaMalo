@@ -10,52 +10,55 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger)
 
+type ArrowTextProps = {
+  text: string;
+  style: string;
+};
+
+function ArrowText({ text, style }: ArrowTextProps) {
+  const animka = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    const anim = animka.current;
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: anim,
+        start: 'top 50%',
+        end: 'top 70%',
+        scrub: 1
+      }
+    });
+    tl.fromTo(anim, {
+      opacity: 0.3
+    }, {
+      opacity: 1
+    });
+  });
+
+  return (
+    <div ref={animka} className={style}>
+      <p>{text}</p>
+    </div>
+  );
+}
+
 type IProps = {
   onGetQuoteClick: () => void;
   showForm: boolean;
   onClose: () => void;
-  text: string;
+  text: string; // Добавляем text как необязательный параметр
 };
-
-function ArrowText({ text, style }) {
-	const animka = useRef(null)
-
-	useGSAP(() => {
-		const anim = animka.current
-
-		const tl = gsap.timeline({
-			scrollTrigger: {
-				trigger: anim,
-				start: 'top 50%',
-				end: 'top 70%',
-				scrub: 1
-			}
-		})
-		tl.fromTo(anim, {
-			opacity: 0.3
-		}, {
-			opacity: 1
-		})
-	})
-
-	return (
-		<div ref={animka} className={style}>
-			<p>
-				{text}
-			</p>
-		</div>
-	)
-}
 
 export const HeartSection = ({
   onGetQuoteClick,
   showForm,
   onClose,
 }: IProps) => {
-  const arrow = useRef(null)
+  const arrow = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    const arrowOrange = arrow.current
+    const arrowOrange = arrow.current;
 
     gsap.timeline({
       scrollTrigger: {

@@ -37,6 +37,8 @@
   justify-content: center;
 
   z-index: 1;
+
+  will-change: opacity, transform;
 }
 
 .arrow svg {
@@ -57,6 +59,8 @@
   position: absolute;
 
   margin: 0 20px;
+
+  will-change: opacity, transform;
 }
 
 .arrowLine svg {
@@ -85,6 +89,8 @@
 
 .textBlock {
   color: #F5F1EE;
+
+  will-change: opacity, transform;
 }
 
 
