@@ -74,8 +74,6 @@
   align-items: center;
 
   position: relative;
-  bottom: 70px;
-  right: 5px;
 }
 
 .heart svg {
@@ -233,7 +231,7 @@
 
     text-align: end;
 
-    margin-top: 111px;
+    margin: 111px 0 100px;
 
     gap: 392px;
   }
@@ -264,7 +262,7 @@
   }
 
   .heart {
-    right: 2px
+    right: 2px;
   }
 
   .heart svg {

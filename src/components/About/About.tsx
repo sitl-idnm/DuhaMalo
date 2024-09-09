@@ -47,7 +47,7 @@ export const About = () => {
             },
             {
                 x: (i) => i === 0 ? 0 : 0,
-                zIndex: 3
+                zIndex: 10
             }
         )
         .fromTo(center,
@@ -56,7 +56,7 @@ export const About = () => {
         },
         {
             opacity: 1,
-            zIndex: 4,
+            zIndex: 11,
         })
 
     });
