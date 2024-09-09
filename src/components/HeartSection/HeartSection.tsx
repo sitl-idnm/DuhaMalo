@@ -55,30 +55,35 @@ export const HeartSection = ({
   onClose,
 }: IProps) => {
   const arrow = useRef<HTMLDivElement>(null);
+  const arrowLine = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
     const arrowOrange = arrow.current;
+    const Line = arrowLine.current
+
 
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: arrowOrange,
+        scrub: 2,
         pin: true,
-        scrub: 1,
+        markers: true,
         start: 'top 50%',
-        end: '500px'
+        endTrigger: Line,
+        end: 'bottom center'
       }
     });
 
     tl.to(arrowOrange, {
-      opacity: 1,
-      duration: 5
+      scrollTrigger: {
+        trigger: Line,
+        scrub: 1,
+        markers: true,
+        start: 'bottom center',
+        end: 'bottom center'
+      },
+      opacity: 0
     })
-    .fromTo(arrowOrange, {
-      opacity: 1
-    }, {
-      opacity: 0,
-      duration: 1
-    });
   });
 
 
@@ -105,7 +110,7 @@ export const HeartSection = ({
               <Arrow />
             </div>
           </div>
-          <div className={styles.arrowLine}>
+          <div className={styles.arrowLine} ref={arrowLine}>
             <ArrowLine />
           </div>
         </div>

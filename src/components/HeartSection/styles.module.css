@@ -64,7 +64,7 @@
 }
 
 .arrowLine svg {
-  height: 1300px;
+  height: 1194px;
 }
 
 
@@ -74,6 +74,7 @@
   align-items: center;
 
   position: relative;
+  bottom: 120px;
 }
 
 .heart svg {
@@ -194,24 +195,6 @@
   }
 }
 
-@keyframes moveSection1 {
-  0% {
-    transform: translate(-50px, 50px);
-  }
-  100% {
-    transform: translate(50px, -50px);
-  }
-}
-
-@keyframes moveSection2 {
-  0% {
-    transform: translate(-50px, -50px);
-  }
-  100% {
-    transform: translate(50px, 50px);
-  }
-}
-
 /*---------------------------------------------------------------------------------------------*/
 /*                                  MEDIA MIN_WIDTH                                            */
 /*---------------------------------------------------------------------------------------------*/
@@ -247,7 +230,7 @@
   }
 
   .arrowLine svg {
-    height: 1300px;
+    height: 1194px;
     width: 6px;
   }
 
