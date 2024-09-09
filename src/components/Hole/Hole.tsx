@@ -26,7 +26,7 @@ const CardScrollAnimation = ({ children }: CardScrollAnimationProps) => {
       const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
-          start: '35% top',
+          start: '37% top',
           end: '+=400%',
           scrub: 1,
           pin: true,
