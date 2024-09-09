@@ -67,7 +67,6 @@ export const HeartSection = ({
         trigger: arrowOrange,
         scrub: 2,
         pin: true,
-        markers: true,
         start: 'top 50%',
         endTrigger: Line,
         end: 'bottom center'
@@ -78,7 +77,6 @@ export const HeartSection = ({
       scrollTrigger: {
         trigger: Line,
         scrub: 1,
-        markers: true,
         start: 'bottom center',
         end: 'bottom center'
       },
