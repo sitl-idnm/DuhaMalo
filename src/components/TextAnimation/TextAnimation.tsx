@@ -39,7 +39,8 @@ export function TextAnimation({ text, style }: TextAnimationProps) {
         scrollTrigger: {
           trigger: TextAnima,
           scrub: 1,
-          start: 'top 70%'
+          start: 'top 70%',
+          end: 'bottom 30%'
         }
       });
       tl.fromTo(TextAnima, {
