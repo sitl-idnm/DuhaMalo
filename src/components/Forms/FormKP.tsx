@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './styles.module.css';
 import emailjs from 'emailjs-com';
 import X from '../../assets/svg/X.svg';
+import policy from '../../../public/policy.pdf'
 
 interface FormData {
   name: string;
@@ -156,7 +157,7 @@ export const FormKP = ({ onClose }: IProps) => {
                   </form>
                   <div className={styles.private}>
                     Нажимая на кнопку "Отправить" Вы соглашаетесь <br />с{' '}
-                    <a href='#'>политикой конфиденциальности</a>
+                    <a href={policy}>политикой конфиденциальности</a>
                   </div>
                 </div>
               </>

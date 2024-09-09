@@ -12,7 +12,7 @@ export const Header = () => {
       </div>
       <div className={styles.headerContent}>
         <a href='tel:+79869900999'>+7 (986) 990 09-99</a>
-        <img src={Tg} alt='tg-icon' />
+        <a href="https://t.me/mst_agency"><img src={Tg} alt='tg-icon' /></a>
       </div>
     </section>
   );

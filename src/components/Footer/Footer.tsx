@@ -1,11 +1,12 @@
 import styles from './styles.module.css';
+import policy from '../../../public/policy.pdf'
 
 export const Footer = () => {
   return (
     <div className={styles.footerContainer}>
       <div className={styles.footerLeft}>
         <p>Copyright © 2024 MST. All rights reserved</p>
-        <a href='#'>Политика конфиденциальности</a>
+        <a href={policy}>Политика конфиденциальности</a>
       </div>
       <div className={styles.footerRight}>
         <a href='mailto:info@agency-mst.com' className={styles.email}>
