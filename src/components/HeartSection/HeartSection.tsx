@@ -65,7 +65,7 @@ export const HeartSection = ({
         pin: true,
         scrub: 1,
         start: 'top 50%',
-        end: '+=100%'
+        end: '500px'
       }
     });
 
