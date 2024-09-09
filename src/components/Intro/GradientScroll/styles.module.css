@@ -8,7 +8,7 @@
 		height: 382px;
 		background: radial-gradient(circle at 30% 0%, #e34717, #FFB800, #ffdc3e);
 		background: -webkit-radial-gradient(circle at 30% 0%, #e34717, #FFB800, #ffdc3e);
-		background-size: 150% 150%;
+		background-size: 125% 125%;
 		animation: gradientAnimation 5s ease infinite;
 		filter: blur(100px);
 		border-radius: 50%;
