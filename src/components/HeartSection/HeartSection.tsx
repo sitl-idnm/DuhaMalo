@@ -59,20 +59,28 @@ export const HeartSection = ({
   useGSAP(() => {
     const arrowOrange = arrow.current;
 
-    gsap.timeline({
+    const tl = gsap.timeline({
       scrollTrigger: {
         trigger: arrowOrange,
         pin: true,
-        scrub: 2,
+        scrub: 1,
         start: 'top 50%',
-        end: '+=127%'
+        end: '+=100%'
       }
-    }).fromTo(arrowOrange, {
+    });
+
+    tl.to(arrowOrange, {
+      opacity: 1,
+      duration: 5
+    })
+    .fromTo(arrowOrange, {
       opacity: 1
     }, {
-      opacity: 0
+      opacity: 0,
+      duration: 1
     });
   });
+
 
   return (
     <div className={styles.wrapper}>
