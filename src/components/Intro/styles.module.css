@@ -9,7 +9,7 @@
 	overflow: hidden;
 
   margin: 0 0 472px;
-  padding: 83px 75px;
+  padding: 23px 75px 83px;
 }
 
 @media (min-width: 360px) {
@@ -18,7 +18,8 @@
     background-size: cover;
 
 		margin: 0 0 150px;
-		padding: 114px 10px;
+		padding: 34px 10px 600px;
+    margin-bottom: -400px;
 	}
 }
 
@@ -26,21 +27,23 @@
   .intro {
     background: center no-repeat url(../../assets/Intro/background-768.svg);
     background-size: cover;
-		padding: 114px 32px;
+		padding: 64px 32px 400px;
+    margin-bottom: -400px;
   }
 }
 
-@media (max-width: 1440px) {
+@media (min-width: 1200px) {
   .intro {
     background: center no-repeat url(../../assets/Intro/background-1440.svg);
     background-size: cover;
+    padding: 64px 32px 800px;
   }
 }
 
 @media (min-width: 1440px) {
   .intro {
     background: center no-repeat url(../../assets/Intro/background.svg);
-    background-size: cover;
+    background-size: contain;
 
     max-width: 1440px;
     margin: 0 auto 472px;
