@@ -18,7 +18,8 @@
     background-size: cover;
 
 		margin: 0 0 150px;
-		padding: 34px 10px 114px;
+		padding: 34px 10px 600px;
+    margin-bottom: -400px;
 	}
 }
 
@@ -26,7 +27,8 @@
   .intro {
     background: center no-repeat url(../../assets/Intro/background-768.svg);
     background-size: cover;
-		padding: 64px 32px 114px;
+		padding: 64px 32px 400px;
+    margin-bottom: -400px;
   }
 }
 
@@ -34,6 +36,7 @@
   .intro {
     background: center no-repeat url(../../assets/Intro/background-1440.svg);
     background-size: cover;
+    padding: 64px 32px 800px;
   }
 }
 
