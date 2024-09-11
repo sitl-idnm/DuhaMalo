@@ -98,7 +98,7 @@ export const HeartSection = ({
             style={styles.textBlock}
           />
           <ArrowText
-            text={'Праздники и корпоративы в Дубае и других странах'}
+            text={'Праздники и корпоративы в ОАЭ и других странах'}
             style={styles.textBlock}
           />
         </div>

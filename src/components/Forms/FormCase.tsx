@@ -8,6 +8,7 @@ interface FormData {
   name: string;
   email: string;
   tel: string;
+  forma: string;
 }
 
 type IProps = {
@@ -19,6 +20,7 @@ export const FormCase = ({ onClose }: IProps) => {
     name: '',
     email: '',
     tel: '',
+    forma: 'Запросить Кейсы',
   });
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [isFormOpen, setIsFormOpen] = useState(true);
@@ -54,6 +56,7 @@ export const FormCase = ({ onClose }: IProps) => {
           from_name: formData.name,
           from_email: formData.email,
           from_tel: formData.tel,
+          from_forma: formData.forma,
         },
         'iIWzgLrMQ8RiUP4BV',
       )
@@ -144,6 +147,14 @@ export const FormCase = ({ onClose }: IProps) => {
                         required
                       />
                     </label>
+                      <input
+                        type='hidden'
+                        name='hidden'
+                        value={formData.forma}
+                        onChange={handleInputChange}
+                        placeholder='email@mail.ru'
+                        required
+                        />
                     <button
                       type='submit'
                       className={`${styles.formButton} ${

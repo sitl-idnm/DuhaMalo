@@ -24,6 +24,7 @@ export const SubtextAnimation = ({ subtext, style }: SubtextAnimationProps) => {
           trigger: text,
           scrub: 1,
           start: 'top 200%',
+          end: 'top 20%',
         }
       });
 

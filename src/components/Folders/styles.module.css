@@ -37,6 +37,7 @@
 	flex-wrap: wrap;
 	align-items: center;
 	position: relative;
+	padding-bottom: 200px;
 }
 
 .folder {

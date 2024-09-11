@@ -22,7 +22,7 @@
   box-sizing: border-box; /* Учитываем padding внутри ширины */
   display: flex;
   flex-direction: column;
-  justify-content: end; /* Выравнивание текста по вертикали */
+  justify-content: center; /* Выравнивание текста по вертикали */
   overflow: hidden; /* Скрываем вылезающий текст */
 }
 

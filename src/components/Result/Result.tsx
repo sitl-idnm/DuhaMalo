@@ -86,8 +86,8 @@ export const Result = () => {
               Правило «Win&nbsp;/&nbsp;Win&nbsp;/&nbsp;Win»
             </h3>
             <p className={styles.cardDescription}>
-              <span className={styles.cardDescriptionSemibold}>Сотрудникам</span>
-              – ресурсы для профессионального роста и самовыражения
+              <span className={styles.cardDescriptionSemibold}>Сотрудникам </span>
+               – ресурсы для профессионального роста и самовыражения
             </p>
             <p className={styles.cardDescription}>
               Клиентам – качественный результат
