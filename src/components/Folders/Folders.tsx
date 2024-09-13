@@ -4,6 +4,7 @@ import styles from './styles.module.css';
 import { FoldersTitle } from './FoldersTitle';
 import { Folder } from './Folder';
 import { useGSAP } from '@gsap/react';
+import { useRef } from 'react';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -12,9 +13,11 @@ type IProps = {
 };
 
 export const Folders = ({ onGetQuoteClick }: IProps) => {
+    const buttonKP = useRef(null)
+
     useGSAP(() => {
+        const button = buttonKP.current
         const container = document.querySelector(`.${styles.foldersContent}`);
-        const wrapper = document.querySelector(`.${styles.foldersWrapper}`);
         const folders = gsap.utils.toArray(`.${styles.folder}`) as HTMLElement[];
 
         // Разворачиваем порядок элементов, чтобы они улетали в обратном порядке
@@ -26,7 +29,7 @@ export const Folders = ({ onGetQuoteClick }: IProps) => {
                 start: 'top 10%', // Начинаем, когда верх контейнера достигает верха окна
                 end: '+=250%', // Прокручиваем высоту контейнера
                 scrub: 2, // Привязка анимации к прокрутке
-                pin: true, // Фиксируем контейнер на месте
+                pin: true // Фиксируем контейнер на месте
             }
         });
 
@@ -38,32 +41,26 @@ export const Folders = ({ onGetQuoteClick }: IProps) => {
                     y: -100, // Перемещаем вверх
                     opacity: 0, // Плавное исчезновение
                     ease: 'sine.in', // Плавность анимации
-                    duration: 100, // Длительность анимации
+                    duration: 1, // Длительность анимации
                     zIndex: -1
-                }, "+=5"); // Задержка между анимациями
+                }); // Задержка между анимациями
         });
-
-        // Анимация для всего wrapper после всех карточек
-        tl.fromTo(wrapper,
-            { y: 0, opacity: 1 },
-            {
-                y: -100, // Перемещаем вверх
-                opacity: 0, // Плавное исчезновение
-                ease: 'power2.in', // Плавность анимации
-                duration: 5, // Длительность анимации
-                zIndex: -1
-            });
+        tl.fromTo(button, {
+            opacity: 0
+        }, {
+            opacity: 1
+        })
     }, []);
 
     return (
         <section className={styles.folders}>
             <div className={styles.foldersContent}>
                 <FoldersTitle />
-                <a href='#' onClick={(e) => {
+                <a href='#' ref={buttonKP} onClick={(e) => {
                     e.preventDefault();
                     onGetQuoteClick();
                 }}>
-                    Получить кп
+                    Получить коммерческое предложение
                 </a>
                 <div className={styles.foldersWrapper}>
                     <div className={styles.folder}>

@@ -1,4 +1,5 @@
 .folders {
+	position: relative;
 	padding: 0 10px;
 	margin-bottom: 100px;
 }
@@ -11,18 +12,26 @@
 }
 
 .foldersContent > a {
+	position: absolute;
+	top: 300px;
+
 	font-family: 'Involve';
-	font-size: 18px;
+	font-size: 12px;
 	line-height: 150%;
 	letter-spacing: 0.1em;
 	font-weight: 600;
 	color: #F5F1EE;
 	text-decoration: none;
-	text-transform: uppercase;
 
 	min-width: 170px;
 
-	background: right no-repeat url(../../assets/Intro/arrow.svg);
+	padding: 20px 45px 20px 20px;
+
+	border-radius: 65px;
+
+	background: 310px no-repeat url(../../assets/Intro/arrow.svg),
+		radial-gradient(78.96% 66.28% at 80.27% 89.72%, #FFB800 0%, rgba(227, 23, 23, 0) 98.68%),
+		linear-gradient(165deg, #E31717 4.54%, #FFB800 95.16%);
 }
 
 .foldersWrapper {
@@ -116,12 +125,16 @@
 		padding: 0 32px;
 	}
 
-	.introTitle > a {
-		font-size: 22px;
-		line-height: 150%;
+	.foldersContent > a {
+		top: 550px;
 
-		max-width: 272px;
+		padding: 20px 59px 20px 24px;
 
+		font-size: 17px;
+
+		background: 430px no-repeat url(../../assets/Intro/arrow.svg),
+		radial-gradient(78.96% 66.28% at 80.27% 89.72%, #FFB800 0%, rgba(227, 23, 23, 0) 98.68%),
+		linear-gradient(165deg, #E31717 4.54%, #FFB800 95.16%);
 	}
 
 	.folderImg > svg {
