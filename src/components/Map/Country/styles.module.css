@@ -11,14 +11,13 @@
 	fill: orange;
 }
 
-.map > svg > svg > g:hover > circle {
+.map > svg > svg > g:hover > svg > circle {
 	fill: orange;
-	border: 4px solid white;
 }
 
-.map > svg > svg > g:hover > path:last-child {
+/* .map > svg > svg > g:hover > path:last-child {
 	fill: orange;
-}
+} */
 
 @media (min-width: 768px) {
 	.map {
