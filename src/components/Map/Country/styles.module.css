@@ -1,0 +1,27 @@
+.map {
+	position: absolute;
+	top: -300px;
+}
+.map > svg {
+	max-width: 100%;
+}
+
+.map > svg > svg > g:hover {
+	opacity: 1;
+	fill: orange;
+}
+
+.map > svg > svg > g:hover > svg > circle {
+	fill: orange;
+}
+
+/* .map > svg > svg > g:hover > path:last-child {
+	fill: orange;
+} */
+
+@media (min-width: 768px) {
+	.map {
+		position: relative;
+		margin-bottom: -1300px;
+	}
+}
