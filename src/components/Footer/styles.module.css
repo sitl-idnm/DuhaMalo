@@ -1,59 +1,94 @@
-.footerContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-
-  max-width: 1290px;
-
-  margin-top: 80px;
-  margin-left: auto;
-  margin-right: auto;
-
-  padding: 0 10px 15px;
+.footer {
+  padding: 0 10px 10px;
 }
 
-.footerLeft, .footerRight {
-  font-size: 14px;
+.footerWrapper {
+  background: linear-gradient(170deg, #E31717, #FFB800);
+  border-radius: 30px;
+  padding: 1px;
+}
+
+.footerContent {
+  background-color: #0D0D0D;
+  border-radius: 30px;
+
+  padding: 44px 32px 52px 47px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+
+  font-size: 16px;
   color: #BABABA;
-  font-weight: 400;
-  text-align: center;
-
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.footerLeft a {
-  color: #858585;
-}
-
-.footerRight a {
-  color: #858585;
   text-decoration: none;
 }
+
+.email, .phone {
+  font-size: 16px;
+  color: #BABABA;
+  text-decoration: none;
+  text-align: right;
+}
+
+.footerCopyright {
+  font-size: 14px;
+}
+
+.email:hover, .phone:hover, .footerCopyright:hover, .footerPolicy:hover  {
+  background: #E31717;
+  background: linear-gradient(to top left, #E31717 6%, #FFB800 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.footerRow:last-child {
+  align-items: end;
+}
+
+.footerRow div {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.footerPolicy {
+  font-size: 14px;
+  text-decoration: underline;
+  color: #858585;
+}
+
 /*---------------------------------------------------------------------------------------------*/
 /*                                  MEDIA MIN_WIDTH                                            */
 /*---------------------------------------------------------------------------------------------*/
 
 @media (min-width: 720px) {
-  .footerContainer {
-    flex-direction: row;
-    gap: 0;
-    justify-content: space-between;
-
-
-    padding: 0 32px;
-  }
-  .footerLeft{
-    text-align: start;
-  }
-  .footerRight{
-    text-align: end;
+  .footer {
+    padding: 0 32px 30px;
   }
 }
 
 @media (min-width: 1440px) {
-  .footerContainer {
-    padding: 0 75px 35px;
+  .footer {
+    padding: 0 75px 65px;
+  }
+}
+
+@media (max-width: 450px) {
+  .email, .phone {
+    font-size: 10px;
+  }
+
+  .footerPolicy, .footerCopyright {
+    font-size: 9px;
+  }
+
+  .footerContent {
+    padding: 22px 16px 26px 23px;
   }
 }
