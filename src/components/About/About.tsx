@@ -55,7 +55,7 @@ export const About = () => {
       }
     })
     tl.to(hidden, {
-      duration: 3
+      duration: 27
     }).set(hidden, {
       autoAlpha: 0
     }).fromTo(visible, {
