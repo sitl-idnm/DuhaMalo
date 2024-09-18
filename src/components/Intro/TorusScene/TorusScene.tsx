@@ -32,7 +32,7 @@ const RotatingTorus = () => {
       <group>
         <lineSegments>
           {/* Исправлены аргументы для edgesGeometry */}
-          <edgesGeometry attach="geometry" args={[new THREE.TorusGeometry(10, 4, 16, 70)]} />
+          <edgesGeometry attach="geometry" args={[new THREE.TorusGeometry(17, 8, 16, 70)]} />
           <lineBasicMaterial attach="material" color="white" />
         </lineSegments>
       </group>
@@ -44,7 +44,7 @@ export const TorusScene = () => {
   return (
     <div className={styles.torus}>
       <Canvas
-        camera={{ position: [10, -20, 20], fov: 75 }}
+        camera={{ position: [10, -33, 20], fov: 75 }}
       >
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
