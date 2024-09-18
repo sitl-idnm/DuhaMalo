@@ -54,5 +54,6 @@
   .titleTorus {
     flex-direction: row;
     margin-bottom: 100px;
+    margin-top: 50px;
   }
 }
