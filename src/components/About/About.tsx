@@ -67,7 +67,7 @@ export const About = () => {
   })
 
   return (
-    <div ref={wrapper}>
+    <div ref={wrapper} className={styles.wrapper}>
       <div ref={textRef} className={styles.textAnimationContainer}>
         {isVisible && (
           <TypeAnimation

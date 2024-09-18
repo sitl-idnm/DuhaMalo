@@ -1,3 +1,11 @@
+.wrapper {
+  margin-top: -300px;
+}
+
+@media (min-width: 900px) {
+  margin-top: -700px;
+}
+
 .textAnimationContainer {
   position: relative;
   display: flex;

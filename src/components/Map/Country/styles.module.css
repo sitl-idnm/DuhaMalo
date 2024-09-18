@@ -39,3 +39,9 @@
 		margin: 0 0 -1300px;
 	}
 }
+
+@media (max-width: 1000px) {
+	g {
+		opacity: 1;
+	}
+}
