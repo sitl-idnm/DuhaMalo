@@ -22,9 +22,11 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-intersection-observer": "^9.13.0",
+    "react-type-animation": "^3.2.0",
     "scrollmagic": "^2.0.8",
     "spline": "^0.0.0",
-    "three": "^0.168.0"
+    "three": "^0.168.0",
+    "use-scramble": "^2.2.15"
   },
   "devDependencies": {
     "@types/react": "^17.0.2",
