@@ -56,7 +56,7 @@ export const FormKP = ({ onClose }: IProps) => {
           from_name: formData.name,
           from_email: formData.email,
           from_tel: formData.tel,
-          form_forma: formData.forma,
+          from_forma: formData.forma,
         },
         'iIWzgLrMQ8RiUP4BV',
       )
@@ -167,8 +167,8 @@ export const FormKP = ({ onClose }: IProps) => {
                     </button>
                   </form>
                   <div className={styles.private}>
-                    Нажимая на кнопку "Отправить" Вы соглашаетесь <br />с{' '}
-                    <a href={policy}>политикой конфиденциальности</a>
+                    Нажимая на кнопку "Отправить" Вы соглашаетесь <br />с
+                    <a href={policy} target='_blank'> политикой конфиденциальности</a>
                   </div>
                 </div>
               </>
