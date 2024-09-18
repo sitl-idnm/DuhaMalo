@@ -55,7 +55,7 @@ export const About = () => {
       }
     })
     tl.to(hidden, {
-      duration: 31
+      duration: 3
     }).set(hidden, {
       autoAlpha: 0
     }).fromTo(visible, {
@@ -72,7 +72,7 @@ export const About = () => {
         {isVisible && (
           <TypeAnimation
             sequence={[
-              ...texts.map(text => [text, 2000, '', 500]), // Показываем текст, ждем 2 секунды, затем очищаем
+              ...texts.map(text => [text, 1000, '', 500]), // Показываем текст, ждем 2 секунды, затем очищаем
             ].flat()}
             wrapper="p"
             cursor={true}

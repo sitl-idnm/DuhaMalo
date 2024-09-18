@@ -24,8 +24,10 @@
 .textAnimationContainerSecond > h2 {
   font-size: 20px;
   background: left no-repeat url(../../assets/About/plane.svg);
-  background-position: 0px;
+  background-position: 20% 100%;
+  background-size: contain;
   width: 250px;
+  margin-left: 30px;
 }
 
 .textAnimationContainer > p::after {
@@ -40,6 +42,7 @@
   .textAnimationContainer > p,
   .textAnimationContainerSecond > h2 {
     font-size: 30px;
+    background-position: 10% 100%;
   }
 }
 
