@@ -33,7 +33,7 @@ const RotatingTorus = () => {
         <lineSegments>
           {/* Исправлены аргументы для edgesGeometry */}
           <edgesGeometry attach="geometry" args={[new THREE.TorusGeometry(17, 8, 16, 30)]} />
-          <lineBasicMaterial attach="material" color="red" />
+          <lineBasicMaterial attach="material" color="white" />
         </lineSegments>
       </group>
     </mesh>
