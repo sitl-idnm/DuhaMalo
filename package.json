@@ -26,7 +26,8 @@
     "scrollmagic": "^2.0.8",
     "spline": "^0.0.0",
     "three": "^0.168.0",
-    "use-scramble": "^2.2.15"
+    "use-scramble": "^2.2.15",
+    "vite-plugin-html": "^3.2.2"
   },
   "devDependencies": {
     "@types/react": "^17.0.2",
