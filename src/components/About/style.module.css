@@ -54,7 +54,7 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1250px) {
   .textAnimationContainer {
     margin-top: -200px;
   }

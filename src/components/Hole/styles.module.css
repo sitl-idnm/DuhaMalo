@@ -216,7 +216,7 @@
 	}
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1250px) {
 
 	.hole {
 		top: calc(30% - 150px);
