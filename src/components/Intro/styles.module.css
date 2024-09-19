@@ -43,16 +43,17 @@
 @media (min-width: 1440px) {
   .intro {
     background: center no-repeat url(../../assets/Intro/background.svg);
-    background-size: contain;
+    background-size: cover;
 
     max-width: 1440px;
     margin: 0 auto 472px;
-    padding: 83px 75px 259px;
+    padding: 83px 75px 550px;
 
   }
 
   .titleTorus {
     flex-direction: row;
     margin-bottom: 100px;
+    margin-top: 50px;
   }
 }

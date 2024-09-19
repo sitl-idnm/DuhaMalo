@@ -7,7 +7,7 @@
 
 @media (min-width: 768px) {
 	.torus {
-		width: 600px;
+		width: 650px;
 		height: 600px;
 		top: 50%;
 	}
@@ -24,13 +24,13 @@
 @media (min-width: 1200px) {
 	.torus {
 		position: absolute;
-		top: 200px;
-		left: 50%;
+		top: 420px;
+		left: 45%;
 	}
 }
 
 @media (min-width: 1440px) {
 	.torus {
-		left: 55%;
+		left: 53%;
 	}
 }
