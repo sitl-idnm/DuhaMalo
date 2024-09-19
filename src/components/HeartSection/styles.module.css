@@ -92,17 +92,6 @@
   will-change: opacity, transform;
 }
 
-
-/*.btn {*/
-/*  font-size: 17px;*/
-/*  width: 206px;*/
-
-/*  border: 1px solid #F5F1EE;*/
-/*  border-radius: 65.14px;*/
-
-/*  padding: 20px 55px;*/
-/*}*/
-
 .btn {
   display: inline-block;
 
@@ -205,7 +194,7 @@
 
     width: 656px;
 
-    margin-top: 378px;
+    /* margin-top: 378px; */
     padding: 0 32px;
   }
 
