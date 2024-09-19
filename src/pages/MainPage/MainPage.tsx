@@ -58,6 +58,16 @@ export const MainPage = () => {
 
   return (
     <div key={renderKey} className={styles.mainPageWrapper}>
+      <div className={styles.display}>
+        <p>InnerWidth</p>
+        {window.innerWidth}
+        <p>outerWidth</p>
+        {window.outerWidth}
+        <p>InnerHeight</p>
+        {window.innerHeight}
+        <p>outerHeight</p>
+        {window.outerHeight}
+      </div>
       <Intro
         onGetQuoteClick={handleGetQuoteClickCase}
         showFormCase={showFormCase}
