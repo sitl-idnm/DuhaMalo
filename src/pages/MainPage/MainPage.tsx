@@ -12,6 +12,7 @@ import { Folders } from '../../components/Folders';
 import { FormKP } from '../../components/Forms';
 import { useState, useEffect } from 'react';
 import { Footer } from '../../components/Footer';
+import { AboutMobile } from '../../components/AboutMobile';
 
 export const MainPage = () => {
   const [showFormKP, setShowFormKP] = useState(false);
@@ -63,6 +64,7 @@ export const MainPage = () => {
         onClose={handleCloseFormCase}
       />
       <About />
+      <AboutMobile />
       <Advantages />
       <Leader />
       <Result />

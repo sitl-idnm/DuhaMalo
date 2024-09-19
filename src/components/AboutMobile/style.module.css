@@ -36,7 +36,6 @@
     will-change: opacity, transform;
 }
 
-
 .centerBall {
   background: center no-repeat url(../../assets/About/centerBall.svg);
   background-size: cover;
