@@ -21,10 +21,6 @@
 			will-change: opacity, transform;
 }
 
-.gradientSafari {
-	background-size: 110% 110%;
-}
-
 @media (min-width: 768px) {
 	.gradientContainer {
 		top: 750px;
