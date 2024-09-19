@@ -36,7 +36,6 @@
     will-change: opacity, transform;
 }
 
-
 .centerBall {
   background: center no-repeat url(../../assets/About/centerBall.svg);
   background-size: cover;
@@ -65,7 +64,7 @@
   }
 }
 
-@media (min-width: 1250px) {
+@media (min-width: 1440px) {
   .about {
       min-height: 390px;
       top: -800px;

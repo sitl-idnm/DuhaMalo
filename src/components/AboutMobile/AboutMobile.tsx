@@ -8,9 +8,9 @@ import styles from './style.module.css'; // Импортируйте CSS фай�
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-export const About = () => {
+export const AboutMobile = () => {
 
-  if (window.innerWidth < 768) {
+  if (window.innerWidth >= 768) {
     return null;
   }
 
@@ -22,48 +22,58 @@ export const About = () => {
   const centerBall = useRef(null);
   useGSAP(() => {
     const cont = about.current;
-    const leftContain = leftCont.current;
-    const rightContain = rightCont.current;
-    const leftBubble = leftBubl.current;
-    const rightBubble = rightBubl.current;
     const center = centerBall.current;
-    gsap.timeline({
+    const tl = gsap.timeline({
       scrollTrigger: {
         trigger: cont,
         start: 'top 40%',
         scrub: 1,
         pin: true
       }
-    })
-      .fromTo(
-        [leftContain, rightContain],
-        {
-          x: (i) => i === 0 ? -210 : 210
-        },
-        {
-          x: (i) => i === 0 ? 0 : 0,
-          zIndex: 2
-        }
-      )
-      .fromTo(
-        [leftBubble, rightBubble],
-        {
-          x: (i) => i === 0 ? -615 : 615
-        },
-        {
-          x: (i) => i === 0 ? 0 : 0,
-          zIndex: 10
-        }
-      )
-      .fromTo(center,
-        {
-          opacity: 0
-        },
-        {
-          opacity: 1,
-          zIndex: 11,
-        })
-  });
+		})
+		tl.fromTo(center,
+			{
+				opacity: 1
+			},
+			{
+				opacity: 0,
+				zIndex: 11,
+			})
+	});
+
+	useGSAP(() => {
+		const cont = about.current;
+		const leftContain = leftCont.current;
+    const rightContain = rightCont.current;
+    const leftBubble = leftBubl.current;
+    const rightBubble = rightBubl.current;
+		gsap.to(
+			[leftContain, rightContain],
+			{
+				scrollTrigger: {
+					trigger: cont,
+					start: 'top 40%',
+					scrub: 1
+				},
+				x: (i) => i === 0 ? -100 : 100,
+				y: (i) => i === 0 ? 100 : 100,
+				zIndex: 2
+			}
+		)
+		gsap.to(
+			[leftBubble, rightBubble],
+			{
+				scrollTrigger: {
+					trigger: cont,
+					start: 'top 40%',
+					scrub: 1
+				},
+				x: (i) => i === 0 ? -100 : 100,
+				y: (i) => i === 0 ? -100 : -100,
+				zIndex: 10
+			}
+		)
+	})
 
   return (
     <section className={styles.about} ref={about}>

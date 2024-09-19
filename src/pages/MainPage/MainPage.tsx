@@ -12,6 +12,8 @@ import { Folders } from '../../components/Folders';
 import { FormKP } from '../../components/Forms';
 import { useState, useEffect } from 'react';
 import { Footer } from '../../components/Footer';
+import { AboutMobile } from '../../components/AboutMobile';
+import { TestDisplay } from '../../components/TestDisplay/TestDisplay';
 
 export const MainPage = () => {
   const [showFormKP, setShowFormKP] = useState(false);
@@ -57,12 +59,14 @@ export const MainPage = () => {
 
   return (
     <div key={renderKey} className={styles.mainPageWrapper}>
+      <TestDisplay />
       <Intro
         onGetQuoteClick={handleGetQuoteClickCase}
         showFormCase={showFormCase}
         onClose={handleCloseFormCase}
       />
       <About />
+      <AboutMobile />
       <Advantages />
       <Leader />
       <Result />
