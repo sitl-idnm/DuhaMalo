@@ -13,6 +13,7 @@ import { FormKP } from '../../components/Forms';
 import { useState, useEffect } from 'react';
 import { Footer } from '../../components/Footer';
 import { AboutMobile } from '../../components/AboutMobile';
+import { TestDisplay } from '../../components/TestDisplay/TestDisplay';
 
 export const MainPage = () => {
   const [showFormKP, setShowFormKP] = useState(false);
@@ -58,16 +59,7 @@ export const MainPage = () => {
 
   return (
     <div key={renderKey} className={styles.mainPageWrapper}>
-      <div className={styles.display}>
-        <p>InnerWidth</p>
-        {window.innerWidth}
-        <p>outerWidth</p>
-        {window.outerWidth}
-        <p>InnerHeight</p>
-        {window.innerHeight}
-        <p>outerHeight</p>
-        {window.outerHeight}
-      </div>
+      <TestDisplay />
       <Intro
         onGetQuoteClick={handleGetQuoteClickCase}
         showFormCase={showFormCase}
