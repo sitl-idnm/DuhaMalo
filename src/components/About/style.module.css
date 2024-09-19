@@ -65,7 +65,7 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1250px) {
   .about {
       min-height: 390px;
       top: -800px;
