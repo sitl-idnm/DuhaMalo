@@ -44,7 +44,7 @@ export const TorusScene = () => {
   return (
     <div className={styles.torus}>
       <Canvas
-        camera={{ position: [11, -30, 25], fov: 75 }}
+        camera={{ position: [13, -30, 25], fov: 75 }}
       >
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
