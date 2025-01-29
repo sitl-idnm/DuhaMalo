@@ -44,16 +44,10 @@ function ArrowText({ text, style }: ArrowTextProps) {
 }
 
 type IProps = {
-  onGetQuoteClick: () => void;
-  showForm: boolean;
-  onClose: () => void;
+  // Пустой интерфейс, так как все предыдущие пропсы больше не нужны
 };
 
-export const HeartSection = ({
-  onGetQuoteClick,
-  showForm,
-  onClose,
-}: IProps) => {
+export const HeartSection = () => {
   const arrow = useRef<HTMLDivElement>(null);
   const arrowLine = useRef<HTMLDivElement>(null);
 
@@ -127,14 +121,10 @@ export const HeartSection = ({
         <Heart />
         <div
           className={styles.btn}
-          onClick={(e) => {
-            e.preventDefault();
-            onGetQuoteClick();
-          }}
+          onClick={() => window.open('https://t.me/m/foKu-e16Y2Vi', '_blank', 'noopener,noreferrer')}
         >
           Хочу к вам
         </div>
-        {showForm && <FormWant onClose={onClose} />}
       </div>
     </div>
   );
