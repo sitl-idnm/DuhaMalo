@@ -17,44 +17,31 @@ import { AboutMobile } from '../../components/AboutMobile';
 export const MainPage = () => {
   const [showFormKP, setShowFormKP] = useState(false);
   const [showFormCase, setShowFormCase] = useState(false);
-  const [showFormWant, setShowFormWant] = useState(false);
   const [renderKey, setRenderKey] = useState(0);
-  const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleGetQuoteClickKP = () => {
-    console.log('Кнопка нажата, показываем форму'); // Проверка нажатия кнопки
+    console.log('Кнопка нажата, показываем форму');
     setShowFormKP(true);
   };
   const handleCloseFormKP = () => {
     setShowFormKP(false);
-    setRenderKey(renderKey + 1); // Изменяем ключ для перерендеринга
+    setRenderKey(renderKey + 1);
   };
 
   const handleGetQuoteClickCase = () => {
-    console.log('Кнопка нажата, показываем форму'); // Проверка нажатия кнопки
+    console.log('Кнопка нажата, показываем форму');
     setShowFormCase(true);
   };
   const handleCloseFormCase = () => {
     setShowFormCase(false);
-    setRenderKey(renderKey + 1); // Изменяем ключ для перерендеринга
-  };
-
-  const handleGetQuoteClickWant = () => {
-    console.log('Кнопка нажата, показываем форму'); // Проверка нажатия кнопки
-    setScrollPosition(window.scrollY); // Сохраняем текущую позицию скроллинга
-    setShowFormWant(true);
-  };
-  const handleCloseFormWant = () => {
-    setShowFormWant(false);
-    window.scrollTo(0, scrollPosition); // Восстанавливаем сохраненную позицию скроллинга
-    setRenderKey(renderKey + 1); // Изменяем ключ для перерендеринга
+    setRenderKey(renderKey + 1);
   };
 
   useEffect(() => {
     if (renderKey > 0) {
-      window.scrollTo(0, scrollPosition); // Восстанавливаем сохраненную позицию скроллинга после перерендеринга
+      window.scrollTo(0, 0);
     }
-  }, [renderKey, scrollPosition]);
+  }, [renderKey]);
 
   return (
     <div key={renderKey} className={styles.mainPageWrapper}>
@@ -73,11 +60,7 @@ export const MainPage = () => {
       {showFormKP && <FormKP onClose={handleCloseFormKP} />}
       <Map />
       <Need />
-      <HeartSection
-        onGetQuoteClick={handleGetQuoteClickWant}
-        showForm={showFormWant}
-        onClose={handleCloseFormWant}
-      />
+      <HeartSection />
       <Footer/>
     </div>
   );

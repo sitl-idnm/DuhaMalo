@@ -2,7 +2,6 @@ import styles from './styles.module.css';
 import { Arrow } from './Arrow';
 import { ArrowLine } from './ArrowLine';
 import { Heart } from './Heart';
-import { FormWant } from '../Forms';
 import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
@@ -42,10 +41,6 @@ function ArrowText({ text, style }: ArrowTextProps) {
     </div>
   );
 }
-
-type IProps = {
-  // Пустой интерфейс, так как все предыдущие пропсы больше не нужны
-};
 
 export const HeartSection = () => {
   const arrow = useRef<HTMLDivElement>(null);
